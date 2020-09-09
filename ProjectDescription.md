@@ -9,7 +9,9 @@
 * Josh Phillips - phill2j7@mail.uc.edu - CS
 
 ## Faculty Advisor
-* TBD
+* Dr. Nan Niu
 
 ## Project Topic Area
-* TBD
+* App for real-time video/audio backup
+* Implement Google Drive API 
+* Implement some sort of encrypted messenging capabilities
