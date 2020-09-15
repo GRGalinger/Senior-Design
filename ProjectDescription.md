@@ -1,7 +1,7 @@
 # Project Description
 
 ## Team Name 
-* Cryto Link
+* Crypto Link
 
 ## Team Memebers / Emails / Majors
 * Grant Galinger - galinggr@mail.uc.edu - CS
