@@ -13,7 +13,7 @@ More specifically, the application will be using the Google Drive API in order t
 
 * User logs in through Google account -> User is authenticated -> Use getUserMedia API for recording audio/video files -> upload files to Google Drive
 
-![D1](images/D0.png)
+![D1](images/D1.png)
 
 
 ### D2:
