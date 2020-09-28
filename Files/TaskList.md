@@ -26,8 +26,11 @@
         * I dont think it would be good practice to just put them in a folder within our directory
 
 ### Grant Galinger
-* 
-
+* Research how to create a Google Drive application
+* Research how to authorize users when accessing application
+* Research Recorder.js demo
+* Implement database - phpMyAdmin
+* Research getUserMedia api for recording video
 
 ### Josh Phillips
 *
