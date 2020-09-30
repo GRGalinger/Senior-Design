@@ -28,9 +28,9 @@
 ### Grant Galinger
 * Research how to create a Google Drive application
 * Research how to authorize users when accessing application
-* Research Recorder.js demo
-* Implement database - phpMyAdmin
-* Research getUserMedia api for recording video
+* Research Recorder.js structure (what code it is made of)
+* Research Recorder.js implementation (how to use it)
+* Implement database \- phpMyAdmin
 
 ### Josh Phillips
 * Research getUserMedia api structure (what code it is made of)
