@@ -37,4 +37,8 @@
 
 
 ### Kyle Spraggins
-*
+* Web Application layout
+    * Develop an overall design for our application (Im thinking sleek and simple)
+    * Home page 
+    * Audio page
+    * Video page
