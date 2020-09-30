@@ -33,7 +33,8 @@
 * Research getUserMedia api for recording video
 
 ### Josh Phillips
-*
+* Research getUserMedia api structure (what code it is made of)
+* Research getUserMedia api implementation (how to use it)
 
 
 ### Kyle Spraggins
