@@ -1,7 +1,7 @@
 # Project Description
 
 ## Team Name 
-* Crypto Link
+* EZ-Drive
 
 ## Team Memebers / Emails / Majors
 * Grant Galinger - galinggr@mail.uc.edu - CS
@@ -12,6 +12,8 @@
 * Dr. Nan Niu
 
 ## Project Topic Area
-* App for real-time video/audio backup
+* Web application for creating video/audio recordings
 * Implement Google Drive API 
-* Implement some sort of encrypted messenging capabilities
+* Impement Dropbox API
+* Implement media capture API
+* Implement a form of file encryption for recorded files
