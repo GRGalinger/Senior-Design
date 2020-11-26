@@ -5,7 +5,7 @@ At the most basic level, this application will allow users to record and save au
 
 * Record audio/video file -> backup on Google Drive
 
-![D0](images/D0.png)
+![D0](Files/Resources/Images/D0.png)
 
 
 ### D1:
@@ -13,7 +13,7 @@ More specifically, the application will be using the Google Drive API in order t
 
 * User logs in through Google account -> User is authenticated -> Use getUserMedia API for recording audio/video files -> upload files to Google Drive
 
-![D1](images/D1.png)
+![D1](Files/Resources/Images/D1.png)
 
 
 ### D2:
@@ -27,7 +27,7 @@ OAuth2.0:
 5.	The application will then take that authorization_code, along with the client_id and client_secret to request a token from the Google Authorization Server.
 6.	The server will send back a token, which will allow the application to access the users Google Drive account.
 
-![D2: OAuth2.0 Design Diagram](images/D2.png)
+![D2: OAuth2.0 Design Diagram](Files/Resources/Images/D2.png)
 
 Audio/Video Recording:
 1.	User clicks “Record” to begin recording and “Stop” when finished recording

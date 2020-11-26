@@ -4,9 +4,8 @@
 * [Google Drive API Quickstart](https://developers.google.com/drive/api/v3/quickstart/php)
 * [Dropbox API reference](https://www.dropbox.com/developers/documentation/http/overview)
 * [Dropbox API file uploading](https://www.dropbox.com/developers/documentation?_tk=pilot_lp&_ad=altcta1&_camp=docs)
-
-## Citations
-* No citations at this time
+* [GetUserMedia API documentation](https://www.sitepoint.com/introduction-getusermedia-api/)
+* [Recorder.js demo](https://github.com/addpipe/simple-recorderjs-demo)
 
 ## Code Repositories
 * [Uploading files to Google Drive](https://github.com/hasankadelp/Uploading-Files-to-Google-Drive-Javascript-PHP-Google-Drive-API)
