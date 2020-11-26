@@ -30,7 +30,7 @@ For this semester, our team worked with each other on all the assignments, aside
 
 ### Team Member Specific Work Effort
 * Grant Galinger
-    * 
+    * test
 
 * Josh Phillips
     *
