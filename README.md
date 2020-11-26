@@ -14,26 +14,26 @@ Ez-Drive is a web application geared around allowing the user to easily record a
 1. [Project Description](Files/Assignments/Project_Description.md)
 
 2. User Stories & Design Diamgrams
-- [User Stories](Files/Assignments/User_Stories.md)
-- [Design Diagrams](Files/Assignments//Design_Diagrams.md)
+    * [User Stories](Files/Assignments/User_Stories.md)
+    * [Design Diagrams](Files/Assignments//Design_Diagrams.md)
 
 3. Project Tasks & Timeline
-- [Project Tasks](Files/Assignments/Task_List.md)
-- [Timeline/Effort Matrix](Files/Assignments/Milestones.pdf)
+    * [Project Tasks](Files/Assignments/Task_List.md)
+    * [Timeline/Effort Matrix](Files/Assignments/Milestones.pdf)
 
 4. [ABET Concerns](Files/Assignments/Constraints.md)
 
 5. [PPT SlideShow](Files/Final_Presentation/PresentationFinal.pptx)
 
 6. Self Assesment Essays
-* [Grant Galinger](Files/Assignments/Self_Assessment_Essays/Grant_Galinger_Assessment.md)
-* [Josh Phillips](Files/Assignments/Self_Assessment_Essays/Josh_Phillips_Assessment.md)
-* [Kyle Spraggins](Files/Assignments/Self_Assessment_Essays/Kyle_Spraggins_Assessment.md)
+    * [Grant Galinger](Files/Assignments/Self_Assessment_Essays/Grant_Galinger_Assessment.md)
+    * [Josh Phillips](Files/Assignments/Self_Assessment_Essays/Josh_Phillips_Assessment.md)
+    * [Kyle Spraggins](Files/Assignments/Self_Assessment_Essays/Kyle_Spraggins_Assessment.md)
 
 7. Professional Biographies
-* [Grant Galinger](Files/Assignments/Professional_Biographies/Grant_Galinger_Professional_Bio.md)
-* [Josh Phillips](Files/Assignments/Professional_Biographies/Josh_Phillips_Professional_Bio.md)
-* [Kyle Spraggins](Files/Assignments/Professional_Biographies/Kyle_Spraggins_Professional_Bio.md)
+    * [Grant Galinger](Files/Assignments/Professional_Biographies/Grant_Galinger_Professional_Bio.md)
+    * [Josh Phillips](Files/Assignments/Professional_Biographies/Josh_Phillips_Professional_Bio.md)
+    * [Kyle Spraggins](Files/Assignments/Professional_Biographies/Kyle_Spraggins_Professional_Bio.md)
 
 8. [Budget](Files/Assignments/Budget.md)
 
