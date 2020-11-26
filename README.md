@@ -1,14 +1,17 @@
-# Fall Senior Design
-### Project Abstract
-Our project is based around a web application geared towards creating audio and video recordings and allowing the user to automatically back them up through either their Google Drive or Dropbox account. This application will allow the user, once they have been authorized through OAuth2.0 Authorization, to seamlessly create audio and/or video recordings directly within the app. When they are finished recording, their files will be encypted and sent to their desired account with use of Google Drive or Dropbox API.
+# EZ-Drive
+Ez-Drive is a web application geared around allowing the user to easily record audio and video files. These files can then be uploaded to Google Drive and DropBox through the use of their respective API libraries. An option to encrypt the recorded files will also be available prior to backing them up through the chosen cloud service. Users will be authenticated through the OAuth2.0 Authentication framework in order to sign into their cloud service accounts. 
+___
 
-### Table of Contents
-1. Team Members:
-- Grant Galinger
-- Josh Phillips
-- Kyle Spraggins
-- Dr. Nan Niu - Advisor
-2. [Project Description](ProjectDescription.md)
+## Team Members:
+* Grant Galinger
+* Josh Phillips
+* Kyle Spraggins
+* Dr. Nan Niu - Project Advisor
+___ 
+
+## Table of Contents
+
+1. [Project Description](ProjectDescription.md)
 3. User Stories & Design Diamgrams
 - [User Stories](Files/User_Stories.md)
 - [Design Diagrams](Files/Design_Diagrams.md)
@@ -18,7 +21,7 @@ Our project is based around a web application geared towards creating audio and 
 5. [ABET Concerns](Files/Constraints.md)
 6. [PPT SlideShow](Files/Presentation/PresentationFinal.pptx)
 7. Self Assesment Essays
-- [Grant Galinger]()
+- [Grant Galinger](TeamEssays/Grant_Galinger_Assessment.md)
 - [Josh Phillips](TeamEssays/Josh_Phillips_Assessment.md)
 - [Kyle Spraggins](TeamEssays/Kyle_Spraggins_Assessment.md)
 8. Professional Biographies
