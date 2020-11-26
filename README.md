@@ -35,6 +35,6 @@ Ez-Drive is a web application geared around allowing the user to easily record a
     * [Josh Phillips](Files/Assignments/Professional_Biographies/Josh_Phillips_Professional_Bio.md)
     * [Kyle Spraggins](Files/Assignments/Professional_Biographies/Kyle_Spraggins_Professional_Bio.md)
 
-8. [Budget](Files/Assignments/Budget.md)
+8. [Budget](Files/Resources/Budget.md)
 
-9. [Appendix](Files/Assignments/Appendix.md) 
+9. [Appendix](Files/Resources/Appendix.md) 
