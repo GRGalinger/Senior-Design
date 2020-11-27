@@ -30,7 +30,17 @@ For this semester, our team worked with each other on all the assignments, aside
 
 ### Team Member Specific Work Effort
 * Grant Galinger
-    * test
+    * Organized Github repo - 11/25 - 2hrs
+    * Researched RecordRTC API projects - 11/16 - 2hrs
+    * Modified existing projects for tests on our Audio.php page - 11/16 -1hr
+    * Researched and tested getUserMedia API projects - 11/15 - 3hrs
+    * Setup basic file structure for our web application - 11/14 - 1hr
+    * Started laying out basic design - 11/14 - 2hrs
+    * Researched HTML/CSS concepts - 1hr
+    * Configuerd WAMPServer on Windows development environment - 11/13 - 3hrs
+    * Debugged PHP environment .ini files 11/13 - 2hrs
+    * Created base project in Google Development Console - 11/13 - 2hrs
+
 
 * Josh Phillips
     *
