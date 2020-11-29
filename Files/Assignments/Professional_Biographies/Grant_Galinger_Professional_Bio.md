@@ -1,5 +1,5 @@
 # Grant Galinger
-# galingger@mail.uc.edu
+### galingger@mail.uc.edu
 
 ### Co\-op Experiences
 * Web Developer, Blubrry Podcasting, Columbus, Ohio \(2020 \- 1 semester\)

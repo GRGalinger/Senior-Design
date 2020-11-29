@@ -19,7 +19,7 @@ Ez-Drive is a web application geared around allowing the user to easily record a
 
 3. Project Tasks & Timeline
     * [Project Tasks](Files/Assignments/Task_List.md)
-    * [Timeline/Effort Matrix](Files/Assignments/Milestones.pdf)
+    * [Timeline/Effort Matrix](Files/Assignments/Milestones.md)
 
 4. [ABET Concerns](Files/Assignments/Constraints.md)
 
