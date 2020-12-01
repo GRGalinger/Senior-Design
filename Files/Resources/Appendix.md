@@ -43,7 +43,13 @@ For this semester, our team worked with each other on all the assignments, aside
 
 
 * Josh Phillips
-    *
+    * Researching various wireframes to create the templates for the application - 11/16 - 2 hrs
+    * HTLM/CSS review course - 11/20 - 4 hrs
+    * Developing an overall design prototype for our application - 11/28 2 hrs
+    * Developing home page template/prototype - 11/28 - 2 hrs
+    * Developing audio page template - 11/29 - 2 hrs
+    * Developing video page template - 11/29 - 2 hrs
+    * Researching wireframes templates for a mobile version of the application - 12/1 - 3 hrs
 
 * Kyle Spraggins
     * Research DropBox APIs - 11/11 - 2 hrs
