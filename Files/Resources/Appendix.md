@@ -46,7 +46,15 @@ For this semester, our team worked with each other on all the assignments, aside
     *
 
 * Kyle Spraggins
-    *
+    * Research DropBox APIs - 11/11 - 2 hrs
+    * Create small application for backing up to dropbox - 11/11 - 3 hrs
+    * Testing video backup - 11/15 - 1 hr
+    * Researching possible encryption algorithms - 11/20 - 2 hrs
+    * Examining code and research for encrypting video files - 11/22 - 3 hrs
+     * Encrypting and Decrypting a video file - 11/22 - 2 hrs
+    * Learning basic UI design principles - 11/23 - 2 hrs
+    * Researching Web Applications - 11/25 - 3 hrs
+  
 
 
 
