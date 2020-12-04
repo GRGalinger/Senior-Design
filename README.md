@@ -6,7 +6,7 @@ Ez-Drive is a web application geared around allowing the user to easily record a
 * Grant Galinger
 * Josh Phillips
 * Kyle Spraggins
-* Dr. Nan Niu - Project Advisor
+* Professor Annexstein - Project Advisor
 
 
 ## Table of Contents
