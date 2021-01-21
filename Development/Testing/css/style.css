@@ -1,18 +1,47 @@
-#drop_file_zone {
-    background-color: #EEE;
-    border: #999 5px dashed;
-    width: 290px;
-    height: 200px;
-    padding: 8px;
-    font-size: 18px;
-}
-#drag_upload_file {
-    width:50%;
-    margin:0 auto;
-}
-#drag_upload_file p {
+/* .cloudservicescb {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+  } */
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    display:inline-block;
+    width: 100%;
+  }
+
+  li {
+    display: inline;
+    float: left;
+    width: 5%;
+    
+  }
+
+  li a {
+    display: block;
+    color: white;
     text-align: center;
-}
-#drag_upload_file #selectfile {
-    display: none;
-}
+    padding: 14px 16px;
+    text-decoration: none;
+    
+  }
+
+  li a:hover {
+    background-color: #111;
+  }
+
+
+  .index-intro {
+    text-align:center;
+  }
+
+  .cloudservices-form {
+    text-align:center;
+  }

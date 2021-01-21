@@ -8,6 +8,7 @@
     <head>
         <meta charset="utf-8">
         <title>MuiltCloud</title>
+        <link href="">
         <link rel="stylesheet" href="css/reset.css">
         <link rel="stylesheet" href="css/style.css">
     </head>
@@ -15,11 +16,9 @@
 
         <nav>
             <div class="wrapper">
-                <a href="index.php"><img src="img/SOMETHING.png" alt="Logo"></img></a>
+                <!-- <a href="index.php"><img src="img/ez.png" alt="Logo"></img></a> -->
                 <ul>
                     <li><a href="index.php">Home</a></li>
-                    <!-- <li><a href="signup.php">Sign up</a></li>
-                    <li><a href="login.php">Login</a></li> -->
                     <?php
                         if (isset($_SESSION["useruid"])) {
                             echo "<li><a href='upload.php'>Upload</a></li>";

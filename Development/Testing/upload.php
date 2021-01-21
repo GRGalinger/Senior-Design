@@ -1,37 +1,29 @@
 <?php include_once 'header.php'; ?>
 
-<!-- <div id="drop_file_zone" ondrop="upload_file(event)" ondragover="return false">
-    <div id="drag_upload_file">
-        <p>Drop file(s) here</p>
-        <p>or</p>
-        <p><input type="button" value="Select File(s)" onclick="file_explorer();"></p>
-        <input type="file" id="selectfile" multiple>
-    </div>
-</div>
+<!-- The drag and drop upload box will be here -->
+<!-- The selection of cloud services will be here as well -->
+	<section class="cloudservices-form">
+		<h2>Select your cloud services</h2>
+		<div class="cloudservices-form-form">
+			<form action="includes/cloudservicesoath.inc.php" method="post">   
+				<label class="container" id="googledrive">Google Drive
+					<input type="checkbox" name="cbgoogledrive">
+					<span class="checkmark"></span>
+				</label>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="js/draganddrop.js"></script> -->
+				<label class="container" id="dropbox">Dropbox
+					<input type="checkbox"  name="cbdropbox">
+					<span class="checkmark"></span>
+				</label>
 
-<div class="container">
-	<h2>Example: Drag and Drop File Upload using jQuery and PHP</h2>	
-	<div class="file_upload">
-		<form action="file_upload.php" class="dropzone">
-			<div class="dz-message needsclick">
-				<strong>Drop files here or click to upload.</strong><br />
-				<span class="note needsclick">(This is just a demo. The selected files are <strong>not</strong> actually uploaded.)</span>
-			</div>
-		</form>		
-	</div>
-</div>
+				<label class="container" id="onedrive">Onedrive
+					<input type="checkbox"  name="cbonedrive">
+					<span class="checkmark"></span>
+				</label>
 
-
-
-
-
-
-
-
-
+				<input type="submit" name="submit" value="Upload"/> 
+			</form>
+		</div>
 
 
 
