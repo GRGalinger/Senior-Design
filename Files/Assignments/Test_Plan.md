@@ -8,7 +8,7 @@ The second deals with our file uploading processes. In order to check if a file 
 The last portion of testing we will employ is testing our connection to cloud services through OAuth2.0 authorization.
 
 ### Test Case Descriptions
-DB1.1   &nbsp;&nbsp;&nbsp;&nbsp;**Database Test 1**<br />
+DB1.1   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Database Test 1**<br />
 DB1.2   &nbsp;&nbsp;&nbsp;&nbsp;This test will ensure that connection to the database is functioning properly.<br />
 DB1.3   &nbsp;&nbsp;&nbsp;&nbsp;This test will execute the mysqli connection function, which will try to connect to the PHPMyAdmin database.<br />
 DB1.4   &nbsp;&nbsp;&nbsp;&nbsp;Inputs: The inputs for this test will be the server name, the database username and password, and the database name.<br />
@@ -19,7 +19,7 @@ DB1.8   &nbsp;&nbsp;&nbsp;&nbsp;Functional<br />
 DB1.9   &nbsp;&nbsp;&nbsp;&nbsp;Unit Test<br />
 DB1.10   &nbsp;&nbsp;Connection to database was successful.<br />
 
-DB2.1   &nbsp;&nbsp;&nbsp;&nbsp;**Database Test 2**<br />
+DB2.1   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Database Test 2**<br />
 DB2.2   &nbsp;&nbsp;&nbsp;&nbsp;This test will test the user account creation.<br />
 DB2.3   &nbsp;&nbsp;&nbsp;&nbsp;This test will use the sign up functions to create test accounts. Then, these accounts will try to be logged in using the login functions.<br />
 DB2.4   &nbsp;&nbsp;&nbsp;&nbsp;Inputs: The inputs will be the user information for creating an account, which are name, email, username, and password.<br />
@@ -30,7 +30,7 @@ DB2.8   &nbsp;&nbsp;&nbsp;&nbsp;Functional<br />
 DB2.9   &nbsp;&nbsp;&nbsp;&nbsp;Unit Test<br />
 DB2.10   &nbsp;&nbsp;Account creation was successful.<br />
 
-DB3.1   &nbsp;&nbsp;&nbsp;&nbsp;**Database Test 3**<br />
+DB3.1   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Database Test 3**<br />
 DB3.2   &nbsp;&nbsp;&nbsp;&nbsp;This test will test database table consistancy when a users deletes their account.<br />
 DB3.3   &nbsp;&nbsp;&nbsp;&nbsp;This test will simulate a user deleting their account to see if their data across all database tables is also deleted.<br />
 DB3.4   &nbsp;&nbsp;&nbsp;&nbsp;Inputs: The inputs will be a delete account query.<br />
@@ -41,7 +41,7 @@ DB3.8   &nbsp;&nbsp;&nbsp;&nbsp;Functional<br />
 DB3.9   &nbsp;&nbsp;&nbsp;&nbsp;Unit Test<br />
 DB3.10   &nbsp;&nbsp;User account successfully deleted by query.<br />
 
-OA1.1   &nbsp;&nbsp;&nbsp;&nbsp;**OAuth2.0 Test 1**<br />
+OA1.1   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**OAuth2.0 Test 1**<br />
 OA1.2   &nbsp;&nbsp;&nbsp;&nbsp;This test will test the authoirization process through Google Drives API.<br />
 OA1.3   &nbsp;&nbsp;&nbsp;&nbsp;This test will go through the authorization process of a user connecting to our Google Drive app in order to upload files.<br />
 OA1.4   &nbsp;&nbsp;&nbsp;&nbsp;Inputs: The inputs will be access tokens and client identification information.<br />
@@ -52,7 +52,7 @@ OA1.8   &nbsp;&nbsp;&nbsp;&nbsp;Functional<br />
 OA1.9   &nbsp;&nbsp;&nbsp;&nbsp;Integration<br />
 OA1.10   &nbsp;&nbsp;User account successfully authorized.<br />
 
-OA2.1   &nbsp;&nbsp;&nbsp;&nbsp;**OAuth2.0 Test 2**<br />
+OA2.1   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**OAuth2.0 Test 2**<br />
 OA2.2   &nbsp;&nbsp;&nbsp;&nbsp;This test will test the authoirization process through Dropbox API.<br />
 OA2.3   &nbsp;&nbsp;&nbsp;&nbsp;This test will go through the authorization process of a user connecting to our Dropbox app in order to upload files.<br />
 OA2.4   &nbsp;&nbsp;&nbsp;&nbsp;Inputs: The inputs will be access tokens and client identification information.<br />
@@ -63,7 +63,7 @@ OA2.8   &nbsp;&nbsp;&nbsp;&nbsp;Functional<br />
 OA2.9   &nbsp;&nbsp;&nbsp;&nbsp;Integration<br />
 OA2.10   &nbsp;&nbsp;User account successfully authorized.<br />
 
-OA3.1   &nbsp;&nbsp;&nbsp;&nbsp;**OAuth2.0 Test 3**<br />
+OA3.1   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**OAuth2.0 Test 3**<br />
 OA3.2   &nbsp;&nbsp;&nbsp;&nbsp;This test will test the authoirization process through OneDrive API.<br />
 OA3.3   &nbsp;&nbsp;&nbsp;&nbsp;This test will go through the authorization process of a user connecting to our OneDrive app in order to upload files.<br />
 OA3.4   &nbsp;&nbsp;&nbsp;&nbsp;Inputs: The inputs will be access tokens and client identification information.<br />
@@ -74,7 +74,7 @@ OA3.8   &nbsp;&nbsp;&nbsp;&nbsp;Functional<br />
 OA3.9   &nbsp;&nbsp;&nbsp;&nbsp;Integration<br />
 OA3.10   &nbsp;&nbsp;User account successfully authorized.<br />
 
-FP1.1   &nbsp;&nbsp;&nbsp;&nbsp;**File Proccessing Test 1**<br />
+FP1.1   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**File Proccessing Test 1**<br />
 FP1.2   &nbsp;&nbsp;&nbsp;&nbsp;This test will test the functionality of the drop and drop file uploading system.<br />
 FP1.3   &nbsp;&nbsp;&nbsp;&nbsp;This test will go through the file uploading procedure ensuring the files do make it to their end destination, as well as appear on screen within the application.<br />
 FP1.4   &nbsp;&nbsp;&nbsp;&nbsp;Inputs: The inputs for this test will be the test files.<br />
