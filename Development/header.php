@@ -11,6 +11,7 @@
         <link href="">
         <link rel="stylesheet" href="css/reset.css">
         <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/dropzone.css" type="text/css">
     </head>
     <body>
 

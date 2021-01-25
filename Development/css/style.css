@@ -1,66 +1,57 @@
-/* .cloudservicescb {
-    display: block;
-    position: relative;
-    padding-left: 35px;
-    margin-bottom: 12px;
-    cursor: pointer;
-    font-size: 22px;
-  } */
-
-  ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #333;
-    display:inline-block;
-    width: 100%;
-  }
-
-  li {
-    display: inline;
-    float: left;
-    width: 5%;
-    
-  }
-
-  li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    
-  }
-
-  li a:hover {
-    background-color: #111;
-  }
-
-
-  .index-intro {
-    text-align:center;
-  }
-
-  .cloudservices-form {
-    text-align:center;
-  }
-
-
-  .container{
-    margin: 0 auto;
-    width: 50%;
+.container{
+  margin: 0 auto;
+  width: 50%;
 }
 
-  .content{
-      padding: 5px;
-      margin: 0 auto;
-  }
-  .content span{
-      width: 250px;
-  }
+.content{
+  padding: 5px;
+  margin: 0 auto;
+}
+.content span{
+  width: 250px;
+}
 
-  .dz-message{
-      text-align: center;
-      font-size: 28px;
-  }
+.dz-message{
+  text-align: center;
+  font-size: 28px;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  display:inline-block;
+  width: 100%;
+}
+
+li {
+  display: inline;
+  float: left;
+  width: 5%;
+  
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  
+}
+
+li a:hover {
+  background-color: #111;
+}
+
+
+.index-intro {
+  text-align:center;
+}
+
+.cloudservices-form {
+  text-align:center;
+}
+

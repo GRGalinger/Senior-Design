@@ -2,8 +2,8 @@
 
 <!-- The drag and drop upload box will be here -->
 <!-- The selection of cloud services will be here as well -->
-<section class="cloudservices-form">
 
+<section class="cloudservices-form">
 	<h2>Select your cloud services</h2>
 	<div class="cloudservices-form-form">
 		<form action="includes/cloudservicesoauth.inc.php" method="post">   
@@ -25,12 +25,36 @@
 			<input type="submit" name="submit" value="Upload"/> 
 		</form>
 	</div>
-
 </section>
 
+<div class="container" >
+	<div class='content'>
+		<form action="includes/upload.inc.php" class="dropzone" id="myAwesomeDropzone"> </form>  
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="js/dropzone.js" type="text/javascript"></script>
+	</div> 
+</div>
 
-
-
+<!-- Script -->
+<script type='text/javascript'>
+	Dropzone.autoDiscover = false;
+	$(".dropzone").dropzone({
+		addRemoveLinks: true,
+		removedfile: function(file) {
+			var name = file.name;    
+			$.ajax({
+				type: 'POST',
+				url: 'includes/upload.inc.php',
+				data: {name: name,request: 2},
+				sucess: function(data){
+					console.log('success: ' + data);
+				}
+			});
+			var _ref;
+			return (_ref = file.previewElement) != null ? _ref.parentNode.removeChild(file.previewElement) : void 0;
+		}
+	});
+</script>
 
 
 

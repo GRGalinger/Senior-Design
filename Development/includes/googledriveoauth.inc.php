@@ -28,22 +28,46 @@ if (file_exists("credentials.json")) {
 
   $drive_service = new Google_Service_Drive($client);
   $file = new Google_Service_Drive_DriveFile();
-  $file->setName(uniqid().'.jpg');
+  //$file->setName(uniqid().'.jpg');
   $file->setDescription('A test document');
   $file->setMimeType('image/jpeg');
 
-  $data = file_get_contents('../uploads/a.jpg');
+  
 
-  try {
-    $createdFile = $drive_service->files->create($file, array(
-      'data' => $data,
-      'mimeType' => 'image/jpeg',
-      'uploadType' => 'multipart'
-    ));
-    echo "Sucessful upload of " . $file['name'];
-  } catch (Exception $exc) {
-    echo $exc->getMessage() . "\n";
+  $dir = new DirectoryIterator('../uploads/');
+  foreach ($dir as $fileinfo) {
+      if (!$fileinfo->isDot()) {
+          //echo $fileinfo->getFilename();
+          $data = file_get_contents('../uploads/' . $fileinfo->getFilename());
+          $file->setName($fileinfo->getFilename());
+          try {
+            
+            // Cases for different file types //
+            // Automatic detection of file extension //
+
+            $createdFile = $drive_service->files->create($file, array(
+              'data' => $data,
+              'mimeType' => 'image/jpeg',
+              'uploadType' => 'multipart'
+            ));
+            echo "Sucessful upload of " . $file['name'];
+          } catch (Exception $exc) {
+            echo $exc->getMessage() . "\n";
+          }
+          
+      }
   }
+
+  // try {
+  //   $createdFile = $drive_service->files->create($file, array(
+  //     'data' => $data,
+  //     'mimeType' => 'image/jpeg',
+  //     'uploadType' => 'multipart'
+  //   ));
+  //   echo "Sucessful upload of " . $file['name'];
+  // } catch (Exception $exc) {
+  //   echo $exc->getMessage() . "\n";
+  // }
   
 
 } else {
