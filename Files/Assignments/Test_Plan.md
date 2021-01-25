@@ -85,6 +85,38 @@ FP1.8   &nbsp;&nbsp;&nbsp;&nbsp;Functional<br />
 FP1.9   &nbsp;&nbsp;&nbsp;&nbsp;Unit Test<br />
 FP1.10   &nbsp;&nbsp;Files uploaded successfully.<br />
 
+E1.1   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Encryption Test 1**<br />
+E1.2   &nbsp;&nbsp;&nbsp;&nbsp;This test will test the functionality of the encryption feature for files.<br />
+E1.3   &nbsp;&nbsp;&nbsp;&nbsp;This test will ensure files are encrypted correctly for different file types.<br />
+E1.4   &nbsp;&nbsp;&nbsp;&nbsp;Inputs: The inputs for this test will be the different test files.<br />
+E1.5   &nbsp;&nbsp;&nbsp;&nbsp;Outputs: The outputs will be an error or success messages.<br />
+E1.6   &nbsp;&nbsp;&nbsp;&nbsp;Normal<br />
+E1.7   &nbsp;&nbsp;&nbsp;&nbsp;Blackbox<br />
+E1.8   &nbsp;&nbsp;&nbsp;&nbsp;Functional<br />
+E1.9   &nbsp;&nbsp;&nbsp;&nbsp;Unit Test<br />
+E1.10   &nbsp;&nbsp;Files encrypted successfully.<br />
+
+D1.1   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Decryption Test 1**<br />
+D1.2   &nbsp;&nbsp;&nbsp;&nbsp;This test will test the functionality of the decryption feature for files.<br />
+D1.3   &nbsp;&nbsp;&nbsp;&nbsp;This test will ensure messages are decrypted correctly.<br />
+D1.4   &nbsp;&nbsp;&nbsp;&nbsp;Inputs: The inputs for this test will be the different encypted test files.<br />
+D1.5   &nbsp;&nbsp;&nbsp;&nbsp;Outputs: The outputs will be an error or success messages.<br />
+D1.6   &nbsp;&nbsp;&nbsp;&nbsp;Normal<br />
+D1.7   &nbsp;&nbsp;&nbsp;&nbsp;Blackbox<br />
+D1.8   &nbsp;&nbsp;&nbsp;&nbsp;Functional<br />
+D1.9   &nbsp;&nbsp;&nbsp;&nbsp;Unit Test<br />
+D1.10   &nbsp;&nbsp;Files encrypted successfully.<br />
+
+E2.1   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Encryption Test 2**<br />
+E2.2   &nbsp;&nbsp;&nbsp;&nbsp;This test will test the functionality of end to end encryption for test files.<br />
+E2.3   &nbsp;&nbsp;&nbsp;&nbsp;This test will ensure end to end encryption from point of encryption to point of decryption.<br />
+E2.4   &nbsp;&nbsp;&nbsp;&nbsp;Inputs: The inputs for this test will be the different test files.<br />
+E2.5   &nbsp;&nbsp;&nbsp;&nbsp;Outputs: The outputs will be an error or success messages for each point in the file encryption to decryption path.<br />
+E2.6   &nbsp;&nbsp;&nbsp;&nbsp;Normal<br />
+E2.7   &nbsp;&nbsp;&nbsp;&nbsp;Blackbox<br />
+E2.8   &nbsp;&nbsp;&nbsp;&nbsp;Functional<br />
+E2.9   &nbsp;&nbsp;&nbsp;&nbsp;Unit Test<br />
+E2.10   &nbsp;&nbsp;Files encrypted successfully.<br />
 
 
 
@@ -98,6 +130,6 @@ FP1.10   &nbsp;&nbsp;Files uploaded successfully.<br />
 | AO2     | Normal          | Blackbox          | Funcitonal             | Integration      |
 | AO3     | Normal          | Blackbox          | Funcitonal             | Integration      |
 | FP1     | Normal          | Blackbox          | Functional             | Unit             |
-|         |                 |                   |                        |                  |
-|         |                 |                   |                        |                  |
-|         |                 |                   |                        |                  |
+| E1      | Normal          | Blackbox          | Functional             | Unit             |
+| D1      | Normal          | Blackbox          | Functional             | Unit             |
+| E2      | Normal          | Blackbox          | Functional             | Unit             |

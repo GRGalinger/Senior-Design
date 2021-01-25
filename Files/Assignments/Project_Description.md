@@ -12,7 +12,7 @@ The application will utilize various media capture APIs in order to record in br
 * Josh Phillips - phill2j7@mail.uc.edu - CS
 
 ## Faculty Advisor
-* Dr. Nan Niu
+* Prof. Fred Annexstein
 
 ## Project Topic Area
 * Web application for creating video/audio recordings
