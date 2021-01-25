@@ -1,6 +1,6 @@
 <?php
 
-require_once __DIR__.'/vendor/autoload.php';
+require_once dirname(__DIR__, 1) .'/vendor/autoload.php';
 
 if (!file_exists("client_id.json")) exit("Client secret file not found");
 $client = new Google_Client();
@@ -19,12 +19,32 @@ if (file_exists("credentials.json")) {
   }
 
   // This is where we upload the files //
-  // The Google_Service_Drive class is not being recognized
 
-	$drive_service = new Google_Service_Drive($client);
-	$files_list = $drive_service->files->listFiles(array())->getFiles(); //http://stackoverflow.com/questions/37975479/call-to-undefined-method-google-service-drive-filelistgetitems
-  echo json_encode($files_list);
-    
+	//$drive_service = new Google_Service_Drive($client);
+	// $files_list = $drive_service->files->listFiles(array())->getFiles(); //http://stackoverflow.com/questions/37975479/call-to-undefined-method-google-service-drive-filelistgetitems
+  // echo json_encode($files_list);
+
+  //var_dump($client);
+
+  $drive_service = new Google_Service_Drive($client);
+  $file = new Google_Service_Drive_DriveFile();
+  $file->setName(uniqid().'.jpg');
+  $file->setDescription('A test document');
+  $file->setMimeType('image/jpeg');
+
+  $data = file_get_contents('../uploads/a.jpg');
+
+  try {
+    $createdFile = $drive_service->files->create($file, array(
+      'data' => $data,
+      'mimeType' => 'image/jpeg',
+      'uploadType' => 'multipart'
+    ));
+    echo "Sucessful upload of " . $file['name'];
+  } catch (Exception $exc) {
+    echo $exc->getMessage() . "\n";
+  }
+  
 
 } else {
   $redirect_uri = 'http://' . $_SERVER['HTTP_HOST'] . '/Projects/SeniorDesign/Development/includes/oauth2callback.inc.php';

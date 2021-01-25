@@ -1,0 +1,7 @@
+{
+    "name": "google/api-client",
+    "description": "Client library for Google APIs",
+    "require": {
+        "google/apiclient": "^2.7"
+    }
+}
