@@ -31,7 +31,7 @@ DB2.9   &nbsp;&nbsp;&nbsp;&nbsp;Unit Test<br />
 DB2.10   &nbsp;&nbsp;Account creation was successful.<br />
 
 DB3.1   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Database Test 3**<br />
-DB3.2   &nbsp;&nbsp;&nbsp;&nbsp;This test will test database table consistancy when a users deletes their account.<br />
+DB3.2   &nbsp;&nbsp;&nbsp;&nbsp;This test will test database table consistency when a users deletes their account.<br />
 DB3.3   &nbsp;&nbsp;&nbsp;&nbsp;This test will simulate a user deleting their account to see if their data across all database tables is also deleted.<br />
 DB3.4   &nbsp;&nbsp;&nbsp;&nbsp;Inputs: The inputs will be a delete account query.<br />
 DB3.5   &nbsp;&nbsp;&nbsp;&nbsp;Outputs: The outputs will be an remaining user data found.<br />
@@ -42,7 +42,7 @@ DB3.9   &nbsp;&nbsp;&nbsp;&nbsp;Unit Test<br />
 DB3.10   &nbsp;&nbsp;User account successfully deleted by query.<br />
 
 OA1.1   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**OAuth2.0 Test 1**<br />
-OA1.2   &nbsp;&nbsp;&nbsp;&nbsp;This test will test the authoirization process through Google Drives API.<br />
+OA1.2   &nbsp;&nbsp;&nbsp;&nbsp;This test will test the authorization process through Google Drives API.<br />
 OA1.3   &nbsp;&nbsp;&nbsp;&nbsp;This test will go through the authorization process of a user connecting to our Google Drive app in order to upload files.<br />
 OA1.4   &nbsp;&nbsp;&nbsp;&nbsp;Inputs: The inputs will be access tokens and client identification information.<br />
 OA1.5   &nbsp;&nbsp;&nbsp;&nbsp;Outputs: The outputs will be user information obtained through the cloud service after authorization has occured.<br />
@@ -53,7 +53,7 @@ OA1.9   &nbsp;&nbsp;&nbsp;&nbsp;Integration<br />
 OA1.10   &nbsp;&nbsp;User account successfully authorized.<br />
 
 OA2.1   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**OAuth2.0 Test 2**<br />
-OA2.2   &nbsp;&nbsp;&nbsp;&nbsp;This test will test the authoirization process through Dropbox API.<br />
+OA2.2   &nbsp;&nbsp;&nbsp;&nbsp;This test will test the authorization process through Dropbox API.<br />
 OA2.3   &nbsp;&nbsp;&nbsp;&nbsp;This test will go through the authorization process of a user connecting to our Dropbox app in order to upload files.<br />
 OA2.4   &nbsp;&nbsp;&nbsp;&nbsp;Inputs: The inputs will be access tokens and client identification information.<br />
 OA2.5   &nbsp;&nbsp;&nbsp;&nbsp;Outputs: The outputs will be user information obtained through the cloud service after authorization has occured.<br />
@@ -64,7 +64,7 @@ OA2.9   &nbsp;&nbsp;&nbsp;&nbsp;Integration<br />
 OA2.10   &nbsp;&nbsp;User account successfully authorized.<br />
 
 OA3.1   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**OAuth2.0 Test 3**<br />
-OA3.2   &nbsp;&nbsp;&nbsp;&nbsp;This test will test the authoirization process through OneDrive API.<br />
+OA3.2   &nbsp;&nbsp;&nbsp;&nbsp;This test will test the authorization process through OneDrive API.<br />
 OA3.3   &nbsp;&nbsp;&nbsp;&nbsp;This test will go through the authorization process of a user connecting to our OneDrive app in order to upload files.<br />
 OA3.4   &nbsp;&nbsp;&nbsp;&nbsp;Inputs: The inputs will be access tokens and client identification information.<br />
 OA3.5   &nbsp;&nbsp;&nbsp;&nbsp;Outputs: The outputs will be user information obtained through the cloud service after authorization has occured.<br />
@@ -118,6 +118,17 @@ E2.8   &nbsp;&nbsp;&nbsp;&nbsp;Functional<br />
 E2.9   &nbsp;&nbsp;&nbsp;&nbsp;Unit Test<br />
 E2.10   &nbsp;&nbsp;Files encrypted successfully.<br />
 
+UX1.1   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Compatibility Test 1**<br />
+UX1.2   &nbsp;&nbsp;&nbsp;&nbsp;This test will test will ensure that the webapp appears and functions properly across all the major web browsers.<br />
+UX1.3   &nbsp;&nbsp;&nbsp;&nbsp;This test will involve visiting the webapp in multiple browsers and performing the major functions to ensure consistency between them.<br />
+UX1.4   &nbsp;&nbsp;&nbsp;&nbsp;Inputs: Various application inputs<br />
+UX1.5   &nbsp;&nbsp;&nbsp;&nbsp;Outputs: Various application outputs<br />
+UX1.6   &nbsp;&nbsp;&nbsp;&nbsp;Normal<br />
+UX1.7   &nbsp;&nbsp;&nbsp;&nbsp;Blackbox<br />
+UX1.8   &nbsp;&nbsp;&nbsp;&nbsp;Functional<br />
+UX1.9   &nbsp;&nbsp;&nbsp;&nbsp;Integration<br />
+UX1.10   &nbsp;&nbsp;Application appears and functions consistently.<br />
+
 
 
 ### Test Case Matrix
@@ -133,3 +144,4 @@ E2.10   &nbsp;&nbsp;Files encrypted successfully.<br />
 | E1      | Normal          | Blackbox          | Functional             | Unit             |
 | D1      | Normal          | Blackbox          | Functional             | Unit             |
 | E2      | Normal          | Blackbox          | Functional             | Unit             |
+| UX1     | Normal          | Blackbox          | Functional             | Integration      |
