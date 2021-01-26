@@ -10,8 +10,8 @@
             }
         ?>
 
-        <h1>Welcome to MultiCloud</h1>
-        <p> MultiCloud is a platform for uploading your files to your favorite cloud services all in one</p>
+        <h1>Welcome to EZ-Drive</h1>
+        <p> EZ-Drive is a platform for uploading your files to your favorite cloud services all in one</p>
     
     </section>
 
