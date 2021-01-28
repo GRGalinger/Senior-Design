@@ -16,7 +16,7 @@ if (!isset($_GET['code'])) {
   header('Location: ' . filter_var($auth_url, FILTER_SANITIZE_URL));
 } else {
   $client->authenticate($_GET['code']);
-  //$_SESSION['access_token'] = $client->getAccessToken();
+  $_SESSION['access_token'] = $client->getAccessToken();
   $access_token = $client->getAccessToken();
   //$access_token = $client->fetchAccessTokenWithAuthCode($_GET['code']);
   file_put_contents("credentials.json", json_encode($access_token));
@@ -25,7 +25,7 @@ if (!isset($_GET['code'])) {
   // Credentials file was just created -- User is logged in at this point -- We can add info to database
   $credentials = (file_get_contents("credentials.json"));
   $credentials = json_decode($credentials, TRUE);
-  var_dump($credentials);
+  //var_dump($credentials);
   
   $usersId = $_SESSION['userid'];
   $accessToken = $credentials['access_token'];
@@ -35,7 +35,7 @@ if (!isset($_GET['code'])) {
   $created = $credentials['created'];
   $refreshToken = $credentials['refresh_token'];
 
-  createCredentials($conn, $usersId, $accessToken, $expires, $scope, $tokenType, $created, $refreshToken);
+  insertCredentials($conn, $usersId, $accessToken, $expires, $scope, $tokenType, $created, $refreshToken);
 
   $redirect_uri = 'http://' . $_SERVER['HTTP_HOST'] . '/Projects/SeniorDesign/Development/upload.php';
   header('Location: ' . filter_var($redirect_uri, FILTER_SANITIZE_URL));

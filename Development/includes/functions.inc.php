@@ -118,7 +118,12 @@ function clearUploads(){
     ); 
 }
 
-function createCredentials($conn, $usersId, $accessToken, $expires, $scope, $tokenType, $created, $refreshToken) {
+function clearCredentialsJson(){
+    $file_pointer = "credentials.json";  
+    unlink($file_pointer);
+}
+
+function insertCredentials($conn, $usersId, $accessToken, $expires, $scope, $tokenType, $created, $refreshToken) {
     $sql = "INSERT INTO google_credentials (usersId, accessToken, expires, scope, tokenType, created, refreshToken) 
         VALUES (?, ?, ?, ?, ?, ?, ?);";
 
@@ -133,5 +138,85 @@ function createCredentials($conn, $usersId, $accessToken, $expires, $scope, $tok
     mysqli_stmt_execute($stmt);
     mysqli_stmt_close($stmt);
     //header("location: ../signup.php?error=none");
-    exit();
+}
+
+function verifyCredentials($conn, $usersId, $accessToken){
+    $sql = "SELECT * FROM google_credentials WHERE usersId = ? AND accessToken = ?;";
+    $stmt = mysqli_stmt_init($conn);
+
+    if (!mysqli_stmt_prepare($stmt, $sql)) {
+        header("location: ../signup.php?error=stmtfailed"); // TODO: This header needs changed
+        exit();
+    }
+
+    mysqli_stmt_bind_param($stmt, "is", $usersId, $accessToken);
+    mysqli_stmt_execute($stmt);
+
+    $resultsData = mysqli_stmt_get_result($stmt);
+
+    // If row is returned, then the logged in user aligns with the credentials file
+    if ($row = mysqli_fetch_assoc($resultsData)) {
+        return $row;
+    } else { 
+        $result = false;
+        return $result;
+    }
+
+    mysqli_stmt_close($stmt);
+}
+
+// IM HERE ---- --- --- ---Working on getting the sql statement to execute //
+function updateAccessToken($conn, $usersId, $accessToken){
+    echo 'update function  ' . $accessToken;
+    $sql = "INSERT INTO google_credentials (accessToken) VALUES (?) WHERE usersId = ?;";
+    $stmt = mysqli_stmt_init($conn);
+
+    if (!mysqli_stmt_prepare($stmt, $sql)) {
+        //header("location: ../signup.php?error=stmtfailed"); 
+        echo "failed";
+        exit();
+    }
+
+    mysqli_stmt_bind_param($stmt, "si", $accessToken, $usersId);
+    echo $stmt;
+    mysqli_stmt_execute($stmt);
+    mysqli_stmt_close($stmt);
+}
+
+function isAccessTokenExpired($conn, $usersId){
+    $sql = "SELECT expires, created FROM google_credentials WHERE usersId = ?;";
+    $stmt = mysqli_stmt_init($conn);
+
+    if (!mysqli_stmt_prepare($stmt, $sql)) {
+        header("location: ../signup.php?error=stmtfailed"); // TODO: This header needs changed
+        exit();
+    }
+
+    mysqli_stmt_bind_param($stmt, "i", $usersId);
+    mysqli_stmt_execute($stmt);
+
+    $resultsData = mysqli_stmt_get_result($stmt);
+
+    if ($row = mysqli_fetch_assoc($resultsData)) {
+
+        $expires = $row['expires'];
+        $created = $row['created'];
+        var_dump($row);
+
+        $currentTime = time();
+
+        if (($currentTime - $created) >= $expires){
+            // access token is expired
+            $result = true;
+            return $result;
+        } else {
+            $result = false;
+            return $result;
+        }
+    } else { 
+        $result = false;
+        return $result;
+    }
+
+    mysqli_stmt_close($stmt);
 }
