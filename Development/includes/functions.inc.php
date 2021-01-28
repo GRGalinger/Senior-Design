@@ -126,11 +126,12 @@ function clearCredentialsJson(){
 function insertCredentials($conn, $usersId, $accessToken, $expires, $scope, $tokenType, $created, $refreshToken) {
     $sql = "INSERT INTO google_credentials (usersId, accessToken, expires, scope, tokenType, created, refreshToken) 
         VALUES (?, ?, ?, ?, ?, ?, ?);";
-
+    
     $stmt = mysqli_stmt_init($conn);
 
     if (!mysqli_stmt_prepare($stmt, $sql)) {
         //header("location: ../signup.php?error=stmtfailed");
+        echo "failed";
         exit();
     }
 
@@ -140,12 +141,38 @@ function insertCredentials($conn, $usersId, $accessToken, $expires, $scope, $tok
     //header("location: ../signup.php?error=none");
 }
 
+function getUserCredentials($conn, $usersId){
+    $sql = "SELECT * FROM google_credentials WHERE usersId = ?;";
+    $stmt = mysqli_stmt_init($conn);
+
+    if (!mysqli_stmt_prepare($stmt, $sql)) {
+        //header("location: ../signup.php?error=stmtfailed"); // TODO: This header needs changed
+        exit();
+    }
+
+    mysqli_stmt_bind_param($stmt, "i", $usersId);
+    mysqli_stmt_execute($stmt);
+
+    $resultsData = mysqli_stmt_get_result($stmt);
+
+    // If row is returned, then the logged in user aligns with the credentials file
+    if ($row = mysqli_fetch_assoc($resultsData)) {
+        mysqli_stmt_close($stmt);
+        return $row;
+    } else { 
+        $result = false;
+        mysqli_stmt_close($stmt);
+        return $result;
+    }
+
+}
+
 function verifyCredentials($conn, $usersId, $accessToken){
     $sql = "SELECT * FROM google_credentials WHERE usersId = ? AND accessToken = ?;";
     $stmt = mysqli_stmt_init($conn);
 
     if (!mysqli_stmt_prepare($stmt, $sql)) {
-        header("location: ../signup.php?error=stmtfailed"); // TODO: This header needs changed
+        //header("location: ../signup.php?error=stmtfailed"); // TODO: This header needs changed
         exit();
     }
 
@@ -156,19 +183,22 @@ function verifyCredentials($conn, $usersId, $accessToken){
 
     // If row is returned, then the logged in user aligns with the credentials file
     if ($row = mysqli_fetch_assoc($resultsData)) {
+        // var_dump($row);
+        // exit();
+        mysqli_stmt_close($stmt);
         return $row;
     } else { 
         $result = false;
+        echo "not the same";
+        // exit();
+        mysqli_stmt_close($stmt);
         return $result;
     }
-
-    mysqli_stmt_close($stmt);
 }
 
 // IM HERE ---- --- --- ---Working on getting the sql statement to execute //
 function updateAccessToken($conn, $usersId, $accessToken){
-    echo 'update function  ' . $accessToken;
-    $sql = "INSERT INTO google_credentials (accessToken) VALUES (?) WHERE usersId = ?;";
+    $sql = "UPDATE google_credentials SET accessToken = ? WHERE usersId = ?;";
     $stmt = mysqli_stmt_init($conn);
 
     if (!mysqli_stmt_prepare($stmt, $sql)) {
@@ -178,9 +208,21 @@ function updateAccessToken($conn, $usersId, $accessToken){
     }
 
     mysqli_stmt_bind_param($stmt, "si", $accessToken, $usersId);
-    echo $stmt;
     mysqli_stmt_execute($stmt);
+    
     mysqli_stmt_close($stmt);
+}
+
+function checkAccessToken($conn, $created, $expires){
+    $currentTime = time();
+    if (($currentTime - $created) >= $expires){
+        // access token is expired
+        $result = true;
+        return $result;
+    } else {
+        $result = false;
+        return $result;
+    }
 }
 
 function isAccessTokenExpired($conn, $usersId){
@@ -201,22 +243,25 @@ function isAccessTokenExpired($conn, $usersId){
 
         $expires = $row['expires'];
         $created = $row['created'];
-        var_dump($row);
+        //var_dump($row);
 
         $currentTime = time();
 
         if (($currentTime - $created) >= $expires){
             // access token is expired
             $result = true;
+            mysqli_stmt_close($stmt);
             return $result;
         } else {
             $result = false;
+            mysqli_stmt_close($stmt);
             return $result;
         }
     } else { 
         $result = false;
+        mysqli_stmt_close($stmt);
         return $result;
     }
 
-    mysqli_stmt_close($stmt);
+    
 }
