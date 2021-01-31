@@ -1,4 +1,4 @@
-# Design Diagrmas
+# Design Diagrams
 
 ### D0:
 At the most basic level, this application will allow users to record and save audio and video file to their Google Drive account
