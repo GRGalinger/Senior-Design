@@ -23,7 +23,7 @@
 * PHP Database implementation 
     * Possible phpMyAdmin
     * Once the audio/video files are recorded, we will need a place to "put" them before we upload them to Google Drive (at least I think so)
-        * I dont think it would be good practice to just put them in a folder within our directory
+        * I don't think it would be good practice to just put them in a folder within our directory
         
 * Encryption
     * Research various quantum secure encryption methods
