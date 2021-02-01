@@ -7,7 +7,7 @@
 <html lang="en" dir="ltr">
     <head>
         <meta charset="utf-8">
-        <title>MuiltCloud</title>
+        <title>EZ-Drive</title>
         <link href="">
         <link rel="stylesheet" href="css/reset.css">
         <link rel="stylesheet" href="css/style.css">
@@ -16,24 +16,21 @@
     <body>
 
         <nav>
-            <div class="wrapper">
-                <!-- <a href="index.php"><img src="img/ez.png" alt="Logo"></img></a> -->
-                <ul>
-                    <li><a href="index.php">Home</a></li>
-                    <?php
-                        if (isset($_SESSION["useruid"])) {
-                            echo "<li><a href='upload.php'>Upload</a></li>";
-                            echo "<li><a href='includes/logout.inc.php'>Log out</a></li>";
-                        } else {
-                            echo "<li><a href='signup.php'>Sign Up</a></li>";
-                            echo "<li><a href='login.php'>Log in</a></li>";
-                        }
-                    ?>
-                </ul>
-            </div>
+            <ul>
+                <li><h2> EZ-drive </h2></li>
+                <li><a href="home.php">Home</a></li>
+                <li><a href="upload.php">Upload</a></li>
+                <li><a href="about.php">About</a></li>
+                
+                <div class="btn-bottom">
+                    <!-- <button type="submit" name="logout">Log Out</button> -->
+                    <a href="includes/logout.inc.php"><button type="submit" name="logout">Logout</button></a>
+                </div>
+                
+            </ul>
         </nav>
 
-    <div class="wrapper">
+    
 
 
     

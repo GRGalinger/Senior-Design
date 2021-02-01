@@ -1,4 +1,235 @@
-.container{
+
+/* Navigation */
+ul {
+  list-style-type: none;
+  top: 0;
+  margin: 0;
+  padding: 0;
+  width: 15%;
+  background: #4A4E69;
+  height: 100%; /* Full height */
+  position: fixed; /* Make it stick, even on scroll */
+  overflow: auto; /* Enable scrolling if the sidenav has too much content */       
+}
+li h2 {
+  color: white;
+  text-align: center;
+
+}
+li a {
+  display: block;
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+}
+li a:hover {
+  background: #22223B;
+  color: white;
+}
+.btn-bottom button {
+  margin-top: 600px;
+  margin-left: 33%;
+  border-radius: 12px;
+  padding: 8px 20px;
+  font-family: "Courier";
+}
+
+/* Body */
+body { 
+  width:68%; 
+  margin: 0;
+  background: #EFE7E6;
+  font-family: "Courier";
+} 
+.container-home {
+  margin-left: 28%;
+  margin-top:5%;
+  /* background: #4A4E69; */
+  background: white;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.container-home .box { 
+  display:table; 
+} 
+.container-home .box .box-row { 
+  display:table-row; 
+} 
+.container-home .box .box-cell { 
+  display:table-cell; 
+} 
+
+/* Index - Account Info */
+.container-home .box .box-cell.account-info { 
+  padding: 10px; 
+  background:white; 
+  color:black; 
+  text-align:justify; 
+  width:350px;
+} 
+.container-home .box .box-cell.account-info button{ 
+  font-family: "Courier";
+  margin-bottom: 2px;
+} 
+
+/* Index - Cloud Services */
+.container-home .box .box-cell.cloud-services {
+  padding: 10px; 
+  padding-left: 20px;
+  background:white; 
+  color:black; 
+  width:300px;
+  text-align:justify
+} 
+.container-home .box .box-cell.cloud-services .cloud-service {
+  margin-bottom: 50px;
+}
+.container-home .box .box-cell.cloud-services h3 {
+  display: inline-block;
+  margin: 0;
+} 
+.container-home .box .box-cell.cloud-services .btn-disconnect {
+  display: inline-block;
+} 
+.container-home .box .box-cell.cloud-services .btn-connect {
+  display: inline-block;
+  margin-left: 200px;
+} 
+
+/* Index Statuses */
+.container-home .box .box-cell.statuses {
+  padding: 10px; 
+  padding-left: 20px;
+  background:white; 
+  color:black; 
+  width:200px;
+  text-align:justify;
+} 
+.container-home .box .box-cell.statuses button {
+  margin-bottom: 50px;
+  border-radius: 12px;
+  box-sizing: border-box;
+  font-family: "Courier";
+} 
+.container-home .box .box-cell.statuses button[type="connect"] {
+  padding: 12px 35px;
+} 
+
+.container-home .box .box-cell.statuses button[type="disconnect"] {
+  padding: 8px 15px;
+  background: #EA8588;
+} 
+.container-home .box .box-cell.statuses .btn-google-drive .btn-connect {
+  display: inline-block;
+} 
+
+.container-home .box .box-cell.statuses .btn-google-drive .btn-disconnect {
+  display: inline-block;
+} 
+
+.container-home .box .box-cell.statuses .btn-onedrive .btn-connect {
+  display: inline-block;
+} 
+
+.container-home .box .box-cell.statuses .btn-onedrive .btn-disconnect {
+  display: inline-block;
+} 
+
+.container-home .box .box-cell.statuses .btn-dropbox .btn-connect {
+  display: inline-block;
+} 
+
+.container-home .box .box-cell.statuses .btn-dropbox .btn-disconnect {
+  display: inline-block;
+} 
+
+/* Index - Upload button */
+.btn-upload button{
+  margin-left:900px;
+  margin-top: 20px;
+  padding: 20px 85px;
+  border-radius: 12px;
+  background: #95D5B2;
+  font-family: "Courier";
+}
+
+/* Upload - Container  */
+.container-upload {
+  margin-left: 28%;
+  margin-top:7.6%;
+  padding: 10px; 
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.container-upload input[type="submit"] {
+  padding: 8px 35px;
+  border-radius: 12px;
+}
+
+/* Login - Container  */
+.container-login {
+  margin-left: 58%;
+  margin-top:7.6%;
+  width: 300px;
+  height: 240px;
+  padding: 10px; 
+  background: #A0A3BB;
+  color: white;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.container-login h2 {
+  margin-left: 50px;
+}
+
+.container-login input, .container-login button {
+  display: block;
+  padding: 12px 20px;
+  margin-bottom: 5px;
+}
+
+.container-login input {
+  margin-left: 14.5%;
+}
+.container-login button[type="submit"] {
+  margin-top: 20px;
+  margin-left: 105px;
+}
+
+.login-message h1, .login-message p {
+  margin-top: 40px;
+  margin-left: 500px;
+  width: 1000px;
+}
+
+.text-signup p {
+  color: black;
+  text-decoration: underline;
+  margin-top: 50px;
+  margin-left:37%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .container-home{
   margin: 0 auto;
   width: 50%;
 }
@@ -55,3 +286,21 @@ li a:hover {
   text-align:center;
 }
 
+.signup-form {
+  background-color: #aaa;
+  text-align:center;
+}
+
+input[type=text], input[type=password] {
+  display:block;
+  width:15%;
+  margin:10px 0;
+  padding:10px;
+  border-radius:10px;
+  border: 1px solid #eee;
+  transition: .3s border-color;
+}
+
+input[type=text]:hover, input[type=password]:hover {
+  border: 1px solid #aaa;
+} */

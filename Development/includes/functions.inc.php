@@ -85,7 +85,7 @@ function emptyInputsLogin($username, $pwd) {
 }
 
 function loginUser($conn, $username, $pwd) {
-
+    
     $uidExists = uidExists($conn, $username, $username);
 
     if ($uidExists === false) {
@@ -105,9 +105,10 @@ function loginUser($conn, $username, $pwd) {
         session_start();
         $_SESSION["userid"] = $uidExists["usersId"];
         $_SESSION["useruid"] = $uidExists["usersUid"];
+        
         clearUploads();
-        header("location: ../index.php");
-        exit();
+        header("location: ../home.php");
+        // exit();
 
     }
 }
