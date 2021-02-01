@@ -6,7 +6,7 @@ The application will utilize various media capture APIs in order to record in br
 ## Team Name 
 * EZ-Drive
 
-## Team Memebers / Emails / Majors
+## Team Members / Emails / Majors
 * Grant Galinger - galinggr@mail.uc.edu - CS
 * Kyle Spraggins - spraggkj@mail.uc.edu - CS
 * Josh Phillips - phill2j7@mail.uc.edu - CS
@@ -17,6 +17,6 @@ The application will utilize various media capture APIs in order to record in br
 ## Project Topic Area
 * Web application for creating video/audio recordings
 * Implement Google Drive API 
-* Impement Dropbox API
+* Implement Dropbox API
 * Implement media capture API
 * Implement a form of file encryption for recorded files
