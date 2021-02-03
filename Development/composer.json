@@ -1,7 +1,6 @@
 {
-    "name": "google/api-client",
-    "description": "Client library for Google APIs",
     "require": {
-        "google/apiclient": "^2.7"
+        "google/apiclient": "^2.7",
+        "kunalvarma05/dropbox-php-sdk":"0.2.1"
     }
 }

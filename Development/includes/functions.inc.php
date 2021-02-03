@@ -119,11 +119,6 @@ function clearUploads(){
     ); 
 }
 
-function clearCredentialsJson(){
-    $file_pointer = "credentials.json";  
-    unlink($file_pointer);
-}
-
 function insertCredentials($conn, $usersId, $accessToken, $expires, $scope, $tokenType, $created, $refreshToken) {
     $sql = "INSERT INTO google_credentials (usersId, accessToken, expires, scope, tokenType, created, refreshToken) 
         VALUES (?, ?, ?, ?, ?, ?, ?);";
@@ -142,13 +137,38 @@ function insertCredentials($conn, $usersId, $accessToken, $expires, $scope, $tok
     //header("location: ../signup.php?error=none");
 }
 
-function getUserCredentials($conn, $usersId){
-    $sql = "SELECT * FROM google_credentials WHERE usersId = ?;";
+function insertDropboxCredentials($conn, $usersId, $accessToken, $expires, $created) {
+    $sql = "INSERT INTO dropbox_credentials (usersId, accessToken, expires, created) 
+        VALUES (?, ?, ?, ?);";
+    
+    $stmt = mysqli_stmt_init($conn);
+
+    if (!mysqli_stmt_prepare($stmt, $sql)) {
+        //header("location: ../signup.php?error=stmtfailed");
+        echo "failed";
+        exit();
+    }
+
+    mysqli_stmt_bind_param($stmt, "isii", $usersId, $accessToken, $expires, $created);
+    mysqli_stmt_execute($stmt);
+    mysqli_stmt_close($stmt);
+}
+
+function getUserCredentials($conn, $usersId, $dbName){
+
+    if ($dbName == "google_credentials"){
+        $sql = "SELECT * FROM google_credentials WHERE usersId = ?;";
+    } else if ($dbName == "dropbox_credentials"){
+        $sql = "SELECT * FROM dropbox_credentials WHERE usersId = ?;";
+    } else if ($dbName == "onedrive_credentials") {
+
+    }
+
     $stmt = mysqli_stmt_init($conn);
 
     if (!mysqli_stmt_prepare($stmt, $sql)) {
         //header("location: ../signup.php?error=stmtfailed"); // TODO: This header needs changed
-        exit();
+        
     }
 
     mysqli_stmt_bind_param($stmt, "i", $usersId);
@@ -197,7 +217,6 @@ function verifyCredentials($conn, $usersId, $accessToken){
     }
 }
 
-// IM HERE ---- --- --- ---Working on getting the sql statement to execute //
 function updateAccessToken($conn, $usersId, $accessToken){
     $sql = "UPDATE google_credentials SET accessToken = ? WHERE usersId = ?;";
     $stmt = mysqli_stmt_init($conn);
@@ -224,45 +243,4 @@ function checkAccessToken($conn, $created, $expires){
         $result = false;
         return $result;
     }
-}
-
-function isAccessTokenExpired($conn, $usersId){
-    $sql = "SELECT expires, created FROM google_credentials WHERE usersId = ?;";
-    $stmt = mysqli_stmt_init($conn);
-
-    if (!mysqli_stmt_prepare($stmt, $sql)) {
-        header("location: ../signup.php?error=stmtfailed"); // TODO: This header needs changed
-        exit();
-    }
-
-    mysqli_stmt_bind_param($stmt, "i", $usersId);
-    mysqli_stmt_execute($stmt);
-
-    $resultsData = mysqli_stmt_get_result($stmt);
-
-    if ($row = mysqli_fetch_assoc($resultsData)) {
-
-        $expires = $row['expires'];
-        $created = $row['created'];
-        //var_dump($row);
-
-        $currentTime = time();
-
-        if (($currentTime - $created) >= $expires){
-            // access token is expired
-            $result = true;
-            mysqli_stmt_close($stmt);
-            return $result;
-        } else {
-            $result = false;
-            mysqli_stmt_close($stmt);
-            return $result;
-        }
-    } else { 
-        $result = false;
-        mysqli_stmt_close($stmt);
-        return $result;
-    }
-
-    
 }

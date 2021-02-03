@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1fe4ac4a522a96904c2e6dbef8cb3572",
+    "content-hash": "8e1a958966a3a0b1cfc37b2bd3b2021d",
     "packages": [
         {
             "name": "firebase/php-jwt",
@@ -131,16 +131,16 @@
         },
         {
             "name": "google/apiclient-services",
-            "version": "v0.157.0",
+            "version": "v0.158.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/googleapis/google-api-php-client-services.git",
-                "reference": "957846303c28c10033fa83d8688ffd325c260a3e"
+                "reference": "859f9c95ed85df02370f355b69c0dcad99367728"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/googleapis/google-api-php-client-services/zipball/957846303c28c10033fa83d8688ffd325c260a3e",
-                "reference": "957846303c28c10033fa83d8688ffd325c260a3e",
+                "url": "https://api.github.com/repos/googleapis/google-api-php-client-services/zipball/859f9c95ed85df02370f355b69c0dcad99367728",
+                "reference": "859f9c95ed85df02370f355b69c0dcad99367728",
                 "shasum": ""
             },
             "require": {
@@ -166,9 +166,9 @@
             ],
             "support": {
                 "issues": "https://github.com/googleapis/google-api-php-client-services/issues",
-                "source": "https://github.com/googleapis/google-api-php-client-services/tree/v0.157.0"
+                "source": "https://github.com/googleapis/google-api-php-client-services/tree/v0.158.0"
             },
-            "time": "2021-01-19T12:20:06+00:00"
+            "time": "2021-01-30T12:20:03+00:00"
         },
         {
             "name": "google/auth",
@@ -429,6 +429,58 @@
             "time": "2020-09-30T07:37:11+00:00"
         },
         {
+            "name": "kunalvarma05/dropbox-php-sdk",
+            "version": "v0.2.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/kunalvarma05/dropbox-php-sdk.git",
+                "reference": "27036f20b7eeb59d5e559e03d4280851f6eb789b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/kunalvarma05/dropbox-php-sdk/zipball/27036f20b7eeb59d5e559e03d4280851f6eb789b",
+                "reference": "27036f20b7eeb59d5e559e03d4280851f6eb789b",
+                "shasum": ""
+            },
+            "require": {
+                "guzzlehttp/guzzle": "~6.0",
+                "tightenco/collect": "^5.2"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^6.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Kunnu\\Dropbox\\": "src/Dropbox"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Kunal Varma",
+                    "email": "kunalvarma05@gmail.com"
+                }
+            ],
+            "description": "Dropbox PHP API V2 SDK (Unofficial)",
+            "keywords": [
+                "api",
+                "client",
+                "dropbox",
+                "php",
+                "sdk",
+                "unofficial"
+            ],
+            "support": {
+                "issues": "https://github.com/kunalvarma05/dropbox-php-sdk/issues",
+                "source": "https://github.com/kunalvarma05/dropbox-php-sdk/tree/master"
+            },
+            "time": "2017-06-26T09:37:16+00:00"
+        },
+        {
             "name": "monolog/monolog",
             "version": "1.26.0",
             "source": {
@@ -638,21 +690,21 @@
         },
         {
             "name": "phpseclib/phpseclib",
-            "version": "3.0.3",
+            "version": "3.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpseclib/phpseclib.git",
-                "reference": "97a5a270e4a9ebfc1a7e2f462e917cbce1a8e6d9"
+                "reference": "845a2275e886ba9fb386c8f59cb383dd9c8963e9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpseclib/phpseclib/zipball/97a5a270e4a9ebfc1a7e2f462e917cbce1a8e6d9",
-                "reference": "97a5a270e4a9ebfc1a7e2f462e917cbce1a8e6d9",
+                "url": "https://api.github.com/repos/phpseclib/phpseclib/zipball/845a2275e886ba9fb386c8f59cb383dd9c8963e9",
+                "reference": "845a2275e886ba9fb386c8f59cb383dd9c8963e9",
                 "shasum": ""
             },
             "require": {
                 "paragonie/constant_time_encoding": "^1|^2",
-                "paragonie/random_compat": "^1.4|^2.0",
+                "paragonie/random_compat": "^1.4|^2.0|^9.99.99",
                 "php": ">=5.6.1"
             },
             "require-dev": {
@@ -729,7 +781,7 @@
             ],
             "support": {
                 "issues": "https://github.com/phpseclib/phpseclib/issues",
-                "source": "https://github.com/phpseclib/phpseclib/tree/3.0.3"
+                "source": "https://github.com/phpseclib/phpseclib/tree/3.0.4"
             },
             "funding": [
                 {
@@ -745,7 +797,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-01-16T17:35:19+00:00"
+            "time": "2021-01-25T19:02:05+00:00"
         },
         {
             "name": "psr/cache",
@@ -1270,6 +1322,57 @@
                 }
             ],
             "time": "2020-10-23T09:01:57+00:00"
+        },
+        {
+            "name": "tightenco/collect",
+            "version": "v5.4.33",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/tighten/collect.git",
+                "reference": "73aa38b20d932f5e8f8ccf721e4c27f4304783d6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/tighten/collect/zipball/73aa38b20d932f5e8f8ccf721e4c27f4304783d6",
+                "reference": "73aa38b20d932f5e8f8ccf721e4c27f4304783d6",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.6.4"
+            },
+            "require-dev": {
+                "mockery/mockery": "^0.9.7",
+                "phpunit/phpunit": "^5.7"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "src/Illuminate/Support/helpers.php"
+                ],
+                "psr-4": {
+                    "Illuminate\\": "src/Illuminate"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Taylor Otwell",
+                    "email": "taylorotwell@gmail.com"
+                }
+            ],
+            "description": "Collect - Illuminate Collections as a separate package.",
+            "keywords": [
+                "collection",
+                "laravel"
+            ],
+            "support": {
+                "issues": "https://github.com/tighten/collect/issues",
+                "source": "https://github.com/tighten/collect/tree/v5.4.33"
+            },
+            "time": "2017-08-14T20:47:19+00:00"
         }
     ],
     "packages-dev": [],

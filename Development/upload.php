@@ -1,4 +1,7 @@
-<?php include_once 'header.php'; ?>
+<?php 
+	include_once 'header.php'; 
+	require_once 'includes/functions.inc.php';
+?>
 
 <!-- The drag and drop upload box will be here -->
 <!-- The selection of cloud services will be here as well -->
@@ -7,7 +10,7 @@
 	<div class="cloudservices-form">
 		<h1>Select your cloud services</h1>
 		<div class="cloudservices-form-form">
-			<form action="includes/cloudservicesoauth.inc.php" method="post">   
+			<form action="includes/cloud_services_oauth.inc.php" method="post">   
 				<label class="checkbox" id="googledrive">Google Drive
 					<input type="checkbox" name="cbgoogledrive">
 					<span class="checkmark"></span>
