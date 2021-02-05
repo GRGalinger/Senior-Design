@@ -58,7 +58,7 @@ body {
   display:table-cell; 
 } 
 
-/* Index - Account Info */
+/* Home - Account Info */
 .container-home .box .box-cell.account-info { 
   padding: 10px; 
   background:white; 
@@ -71,7 +71,7 @@ body {
   margin-bottom: 2px;
 } 
 
-/* Index - Cloud Services */
+/* Home - Cloud Services */
 .container-home .box .box-cell.cloud-services {
   padding: 10px; 
   padding-left: 20px;
@@ -95,7 +95,7 @@ body {
   margin-left: 200px;
 } 
 
-/* Index Statuses */
+/* Home Statuses */
 .container-home .box .box-cell.statuses {
   padding: 10px; 
   padding-left: 20px;
@@ -142,7 +142,7 @@ body {
   display: inline-block;
 } 
 
-/* Index - Upload button */
+/* Home - Upload button */
 .btn-upload button{
   margin-left:900px;
   margin-top: 20px;
@@ -167,8 +167,8 @@ body {
 }
 
 /* Login - Container  */
-.container-login {
-  margin-left: 58%;
+.container-login, .container-signup {
+  margin-left: 61%;
   margin-top:7.6%;
   width: 300px;
   height: 240px;
@@ -178,129 +178,72 @@ body {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
-.container-login h2 {
+.container-signup {
+  height: 375px;
+}
+
+.container-login h2, .container-signup h2 {
   margin-left: 50px;
 }
 
-.container-login input, .container-login button {
+.container-login input, .container-login button, .container-signup input, .container-signup button {
   display: block;
   padding: 12px 20px;
   margin-bottom: 5px;
 }
 
-.container-login input {
+.container-login input, .container-signup input {
   margin-left: 14.5%;
 }
-.container-login button[type="submit"] {
+.container-login button[type="submit"], .container-signup button[type="submit"] {
   margin-top: 20px;
   margin-left: 105px;
 }
 
-.login-message h1, .login-message p {
+.login-message h1, .login-message p, .signup-message h1, .signup-message p {
   margin-top: 40px;
   margin-left: 500px;
   width: 1000px;
 }
 
-.text-signup p {
+.text-signup p, .text-login p {
   color: black;
   text-decoration: underline;
   margin-top: 50px;
   margin-left:37%;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* .container-home{
-  margin: 0 auto;
-  width: 50%;
+.text-login p {
+  margin-left:40%;
 }
 
-.content{
-  padding: 5px;
-  margin: 0 auto;
-}
-.content span{
-  width: 250px;
-}
-
-.dz-message{
-  text-align: center;
-  font-size: 28px;
-}
-
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #333;
-  display:inline-block;
+/* Footer  */
+.container-footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
   width: 100%;
-}
-
-li {
-  display: inline;
-  float: left;
-  width: 5%;
-  
-}
-
-li a {
-  display: block;
+  background: #A0A3BB;
   color: white;
   text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  
 }
 
-li a:hover {
-  background-color: #111;
+.footer-content a {
+  display: inline-block;
+}
+
+.footer-content p{
+  /* display: inline-block; */
+  margin-bottom: 2px;
+  margin-top: 2px;
+}
+
+span {
+  content: "\00A9";
 }
 
 
-.index-intro {
-  text-align:center;
-}
 
-.cloudservices-form {
-  text-align:center;
-}
 
-.signup-form {
-  background-color: #aaa;
-  text-align:center;
-}
 
-input[type=text], input[type=password] {
-  display:block;
-  width:15%;
-  margin:10px 0;
-  padding:10px;
-  border-radius:10px;
-  border: 1px solid #eee;
-  transition: .3s border-color;
-}
 
-input[type=text]:hover, input[type=password]:hover {
-  border: 1px solid #aaa;
-} */

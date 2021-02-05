@@ -1,5 +1,13 @@
 <?php 
     include_once 'header.php';
+    require_once 'includes/functions.inc.php';
+    require_once 'includes/dbh.inc.php';
+
+    $userId = $_SESSION['userid'];
+    $userInfo = getHomePageUserInfo($conn, $userId);
+    $usersName = $userInfo['usersName'];
+    $usersUid = $userInfo['usersUid'];
+    $usersEmail = $userInfo['usersEmail'];
 ?>
 
     <div class="intro-index">
@@ -20,11 +28,11 @@
 					<div class="box-cell account-info"> 
                         <form action="edituserinfo.inc.php">
                             <h1> Account Info </h1>
-                            <h3> Name: Grant Galinger</h3>
+                            <h3> Name: <?php echo $usersName ?></h3>
                             <hr>
-                            <h3> Username: grg </h3>
+                            <h3> Username: <?php echo $usersUid ?></h3>
                             <hr>
-                            <h3> Email: grant.galinger@gmail.com </h3>
+                            <h3> Email: <?php echo $usersEmail ?></h3>
                             <hr>
                             <div class="btn-edit">
                                 <button type="submit" name="edit">edit</button>

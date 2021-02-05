@@ -113,6 +113,30 @@ function loginUser($conn, $username, $pwd) {
     }
 }
 
+function getHomePageUserInfo($conn, $usersId){
+    $sql = "SELECT usersName, usersEmail, usersUid FROM users WHERE usersId = ?;";
+    $stmt = mysqli_stmt_init($conn);
+
+    if (!mysqli_stmt_prepare($stmt, $sql)) {
+        //header("location: ../signup.php?error=stmtfailed"); // TODO: This header needs changed
+    }
+
+    mysqli_stmt_bind_param($stmt, "i", $usersId);
+    mysqli_stmt_execute($stmt);
+
+    $resultsData = mysqli_stmt_get_result($stmt);
+
+    // If row is returned, then the logged in user aligns with the credentials file
+    if ($row = mysqli_fetch_assoc($resultsData)) {
+        mysqli_stmt_close($stmt);
+        return $row;
+    } else { 
+        $result = false;
+        mysqli_stmt_close($stmt);
+        return $result;
+    }
+}
+
 function clearUploads(){
     array_map('unlink', array_filter( 
         (array) array_merge(glob("../uploads/*")))
@@ -168,7 +192,6 @@ function getUserCredentials($conn, $usersId, $dbName){
 
     if (!mysqli_stmt_prepare($stmt, $sql)) {
         //header("location: ../signup.php?error=stmtfailed"); // TODO: This header needs changed
-        
     }
 
     mysqli_stmt_bind_param($stmt, "i", $usersId);

@@ -1,7 +1,4 @@
-<?php 
-    include_once 'header_login.php'; 
-    
-?>
+<?php include_once 'header_login.php'; ?>
 
 <div class="login-message">
     <h1>Welcome to EZ-Drive</h1>

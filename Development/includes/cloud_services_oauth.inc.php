@@ -29,7 +29,7 @@ if (isset($_POST["submit"])) {
     
     } 
 
-    header("location: ../results.php");
+    header("location: ../results.php"); 
 
 
    
