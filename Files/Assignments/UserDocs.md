@@ -24,11 +24,11 @@
 
 ## Section 2.0 - Cloning Repository for Local Usage
 ### This section if for users lookiong to clone our Github repository and setup and run our project locally on their own device. There are several steps needed for this to work properly.
-### 1) Download and Instal PHP Webserver
+### 1) Download and Install PHP Webserver
 #### - WAMPServer for Windows - recommended
 #### - Apache for Mac - recommended
 
-### 2) Download and Instal Composer Dependency Manager
+### 2) Download and Install Composer Dependency Manager
 
 ### 2) Clone Repository
 #### - create db tables
