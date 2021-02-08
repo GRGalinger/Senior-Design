@@ -11,8 +11,8 @@
 #### When you first reach our project, you will be directed to a Login page where you have the option of logging in or creating an account if you do not have one. Signing up requires little information. All that is needed is your name, a username, your email, and a password. Once your account is created you will be directed back to the Login page. 
 
 <p>
-  <img src="../Resources/Images/signup.png" width="38%" />
-  <img src="../Resources/Images/login.png" width="38%" /> 
+  <img src="../Resources/Images/signup.png" width="36%" />
+  <img src="../Resources/Images/login.png" width="36%" /> 
 </p>
 
 
