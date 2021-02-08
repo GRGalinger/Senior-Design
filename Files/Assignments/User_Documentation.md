@@ -10,8 +10,7 @@
 ### 1) Log in or Sign Up to Create an Account
 #### When you first reach our project, you will be directed to a Login page where you have the option of logging in or creating an account if you do not have one. Signing up requires little information. All that is needed is your name, a username, your email, and a password. Once your account is created you will be directed back to the Login page. 
 
-:--------------------------------------:|:--------------------------------------:
-![Login](../Resources/Images/login.png) |![Signup](../Resources/Images/signup.png)
+![Login](../Resources/Images/login.png) ![Signup](../Resources/Images/signup.png)
 
 ### 2) Connect Cloud Service Accounts
 #### Once logged in, you will be taken to our Home page. Here, your account information is displayed, as well as the status for each of the cloud services we offer connection to. Those being: Google Drive, Dropbox, and OneDrive. In order to connect your cloud service accounts to our application simply click on the "connect" button next to each cloud service. This will take you through the authorization process of connecting your cloud service account. Essentially, you have to allow our application to access your cloud service account resources. By doing so, our application will be able to upload files to your connected cloud service accounts.
