@@ -3,7 +3,7 @@
 ## Introduction
 ### This user documentation will be broken down into two main sections. Thie first being geared towards users interacting with our project in its end-state; meaning once it is hosted and accessible from the internet. The second being users who wish to clone our github repository and run our project locally on their own machine. 
 
-### There is a distinct difference in the steps needed to use our project for each of these senarios, which is why we feel it is important to explain them separately. 
+### There is a distinct difference in the steps needed to use our project for each of these scenarios, which is why we feel it is important to explain them separately. 
 
 ## Section 1.0 - End User Guide:
 ### With our project in its end-sate, the steps to utilizing its features are simple.

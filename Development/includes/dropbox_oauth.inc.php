@@ -2,6 +2,7 @@
 
 require_once 'functions.inc.php';
 require_once 'dbh.inc.php';
+session_start();
 
 require_once dirname(__DIR__, 1) .'/vendor/autoload.php';
 use Kunnu\Dropbox\Dropbox;
@@ -16,14 +17,12 @@ $dropboxKey = $data_json['client_id'];
 $dropboxSecret =$data_json['client_secret'];
 
 
-
 // Check if this user has an access token in the db and if its expired 
-$userId = $_SESSION['userid'];
+$userId = $_SESSION["userid"];
 $row = getUserCredentials($conn, $userId, "dropbox_credentials");
 
 if ($row != false) {
     // Check if access token is expired
-    var_dump($row);
     if (checkAccessToken($conn, $row['created'], $row['expires'])){
         // there is no refreshtoken functionality with this dropbox package (kunalvarma05)
  
@@ -42,15 +41,15 @@ if ($row != false) {
     $dir = new DirectoryIterator('../uploads/');
     foreach ($dir as $fileinfo) {
         if (!$fileinfo->isDot()) {
-        $fileName = $fileinfo->getFilename();
-        try {
-            $dropboxFile = new DropboxFile('../uploads/' . $fileinfo->getFilename());
-            $uploadedFile = $dropbox->upload($dropboxFile, "/" . $fileName, ['autorename' => true]);
-            // echo $uploadedFile->getPathDisplay();
-        
-        } catch (Exception $exc) {
-            echo $exc->getMessage() . "\n";
-        }
+            $fileName = $fileinfo->getFilename();
+            try {
+                $dropboxFile = new DropboxFile('../uploads/' . $fileinfo->getFilename());
+                $uploadedFile = $dropbox->upload($dropboxFile, "/" . $fileName, ['autorename' => true]);
+                // echo $uploadedFile->getPathDisplay();
+            
+            } catch (Exception $exc) {
+                echo $exc->getMessage() . "\n";
+            }
         }
     }
 
@@ -65,10 +64,8 @@ if ($row != false) {
     //DropboxAuthHelper
     $authHelper = $dropbox->getAuthHelper();
     
-   
     //Callback URL
     $callbackUrl = "http://localhost/Projects/SeniorDesign/Development/includes/dropbox_oauthcallback.inc.php";
-   
 }
 
 

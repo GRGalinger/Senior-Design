@@ -17,7 +17,11 @@ if (isset($_POST["submit"])) {
         require_once 'dropbox_oauth.inc.php';
         $authUrl = $authHelper->getAuthUrl($callbackUrl);
         header('Location: ' . filter_var($authUrl, FILTER_SANITIZE_URL));
-
+        
+        
+        
+        
+        
 
 
         
@@ -29,14 +33,8 @@ if (isset($_POST["submit"])) {
     
     } 
 
-    header("location: ../results.php"); 
-
-
-   
-
     // // Redirect back to uploads.php and display success/error messages TODO: Create success message/display
-    // header("location: ../upload.php?error=none");
 
-} else {
-   
 }
+
+// header("location: ../results.php?error=none");

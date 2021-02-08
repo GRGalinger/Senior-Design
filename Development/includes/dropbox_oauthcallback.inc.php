@@ -5,14 +5,13 @@ require_once 'dbh.inc.php';
 
 
 if (isset($_GET['code']) && isset($_GET['state'])) {
+    
     //Bad practice! No input sanitization!
     $code = $_GET['code'];
     $state = $_GET['state'];
 
     //Fetch the AccessToken
     $credentials = $authHelper->getAccessToken($code, $state, $callbackUrl);
-    var_dump($credentials);
-    
     
     // Insert data into db
     $userId = $_SESSION['userid'];
