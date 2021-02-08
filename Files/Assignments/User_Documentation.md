@@ -29,15 +29,23 @@
 ### 4) View Upload Results
 #### Once your uploads have completed, you will be taken to the Results page where a list of the files you uploaded are displayed, as well as links to each of the cloud services if you wish to proceed to them. From here, you can return to the Home page or go back to the Upload page if you wish to upload additional files. 
 
+#### Results page is in progress, no image atm
+
 
 ## Section 2.0 - Cloning Repository for Local Usage
 ### This section if for users lookiong to clone our Github repository and setup and run our project locally on their own device. There are several steps needed for this to work properly.
 ### 1) Download and Install PHP Webserver
 #### - WAMPServer for Windows - recommended
 #### - Apache for Mac - recommended
+#### Having a web server running on your local computer isn’t necessary for developing HTML, CSS, or most JavaScript applications. But because a browser can’t interpret PHP, a local web server is essential if you want to run PHP scripts them without uploading them to a server. Both of the web servers listed work with the database manager, phpMyAdmin, and it is recommended you use this database to run with our application.
 
 ### 2) Download and Install Composer Dependency Manager
+#### Composer is a tool for dependency management in PHP. It allows you to declare the libraries your project depends on and it will manage (install/update) them for you. Once you clone our Github repository you will need to run the command "composer instal" to instal the dependecies setup in the composer.lock file. This will allow your local version of our application to utilize the correct libraries.
 
 ### 2) Clone Repository
-#### - create db tables
-#### - run composer script
+#### Once you clone our repository, you will need to run the composer command mentioned in the previous step, "composer instal". Then, you will need to connect to your database and create the required tables by running the create_tables.sql file with phpMyAdmin. This file will create all the required tables for you. 
+
+#### After all these steps are complete, you should be able to run the application through your localhost browser specifying the correct path, depending upon where you chose to clone the repository.
+
+
+## Section 3.0 - FAQ
