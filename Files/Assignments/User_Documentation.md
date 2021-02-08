@@ -49,3 +49,12 @@
 
 
 ## Section 3.0 - FAQ
+
+### My browser is saying "This site can't be reached" What does this mean? 
+#### You web server may not be running. Check to make sure all services are up and running on you web server.
+
+### I can't connect to the database?
+#### Make sure the credentials in the inlcudes/dbn.inc.php file are correct for your version of the database.
+
+### Is the uploading process secure?
+#### Yes, the uploading process is done through OAuth2.0 Authentication, which is the industry standard for connecting to applications through an HTTP service. 
