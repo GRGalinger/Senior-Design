@@ -12,9 +12,10 @@
 
 <!-- ![Login](../Resources/Images/login.png) ![Signup](../Resources/Images/signup.png) -->
 <p float="left">
-  <img src="../Resources/Images/login.png" width="100" />
-  <img src="../Resources/Images/signup.png" width="100" /> 
+  <img src="../Resources/Images/login.png" width="45%" />
+  <img src="../Resources/Images/signup.png" width="45%" /> 
 </p>
+
 
 ### 2) Connect Cloud Service Accounts
 #### Once logged in, you will be taken to our Home page. Here, your account information is displayed, as well as the status for each of the cloud services we offer connection to. Those being: Google Drive, Dropbox, and OneDrive. In order to connect your cloud service accounts to our application simply click on the "connect" button next to each cloud service. This will take you through the authorization process of connecting your cloud service account. Essentially, you have to allow our application to access your cloud service account resources. By doing so, our application will be able to upload files to your connected cloud service accounts.
