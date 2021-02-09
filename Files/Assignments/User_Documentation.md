@@ -40,10 +40,10 @@
 #### Having a web server running on your local computer isn’t necessary for developing HTML, CSS, or most JavaScript applications. But because a browser can’t interpret PHP, a local web server is essential if you want to run PHP scripts them without uploading them to a server. Both of the web servers listed work with the database manager, phpMyAdmin, and it is recommended you use this database to run with our application.
 
 ### 2) Download and Install Composer Dependency Manager
-#### Composer is a tool for dependency management in PHP. It allows you to declare the libraries your project depends on and it will manage (install/update) them for you. Once you clone our Github repository you will need to run the command "composer instal" to instal the dependecies setup in the composer.lock file. This will allow your local version of our application to utilize the correct libraries.
+#### Composer is a tool for dependency management in PHP. It allows you to declare the libraries your project depends on and it will manage (install/update) them for you. Once you clone our Github repository you will need to run the command "composer install" to install the dependecies setup in the composer.lock file. This will allow your local version of our application to utilize the correct libraries.
 
 ### 2) Clone Repository
-#### Once you clone our repository, you will need to run the composer command mentioned in the previous step, "composer instal". Then, you will need to connect to your database and create the required tables by running the create_tables.sql file with phpMyAdmin. This file will create all the required tables for you. 
+#### Once you clone our repository, you will need to run the composer command mentioned in the previous step, "composer install". Then, you will need to connect to your database and create the required tables by running the create_tables.sql file with phpMyAdmin. This file will create all the required tables for you. 
 
 #### After all these steps are complete, you should be able to run the application through your localhost browser specifying the correct path, depending upon where you chose to clone the repository.
 
