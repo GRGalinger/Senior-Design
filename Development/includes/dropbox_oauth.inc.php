@@ -53,6 +53,11 @@ if ($row != false) {
         }
     }
 
+   
+    if (!isset($_POST["cbonedrive"])) {
+        header("location: ../results.php");
+    }
+
 
 } else {
     //Configure Dropbox Application

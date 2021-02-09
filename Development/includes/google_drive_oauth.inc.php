@@ -5,6 +5,7 @@ require_once 'functions.inc.php';
 require_once 'dbh.inc.php';
 session_start(); 
 
+
 if (!file_exists("client_id.json")) exit("Client secret file not found");
 $client = new Google_Client();
 $client->setAuthConfig('client_id.json');
@@ -46,6 +47,10 @@ if ($row != false){ // A row was returned, so this user has been authenticated b
       }
     }
   }
+
+  if (!isset($_POST["cbdropbox"]) && !isset($_POST["cbonedrive"])) {
+    header("location: ../results.php");
+}
 
 } else {  // A row was not returned, so this user has not been authenticated before
   $redirect_uri = 'http://' . $_SERVER['HTTP_HOST'] . '/Projects/SeniorDesign/Development/includes/google_drive_oauthcallback.inc.php';

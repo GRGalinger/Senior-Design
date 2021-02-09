@@ -24,7 +24,6 @@
                 <li><a href="about.php">About</a></li>
                 
                 <div class="btn-bottom">
-                    <!-- <button type="submit" name="logout">Log Out</button> -->
                     <a href="includes/logout.inc.php"><button type="submit" name="logout">Logout</button></a>
                 </div>
                 
