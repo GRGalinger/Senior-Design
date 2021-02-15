@@ -8,6 +8,14 @@ function emptyInputsSignup($name, $email, $username, $pwd, $pwdRepeat) {
     return $result;
 }
 
+function emptyInputsEditInfo($name, $email, $username) {
+    $result;
+    if (empty($name) || empty($email) || empty($username)) {
+        $result = true;
+    } else { $result = false; }
+    return $result;
+}
+
 function invalidUid($username) {
     $result;
     if (!preg_match("/^[a-zA-Z0-9]*$/", $username)) {
@@ -30,6 +38,30 @@ function pwdMatch($pwd, $pwdRepeat) {
         $result = true;
     } else { $result = false; }
     return $result;
+}
+
+function uidExistsEditInfo($conn, $username) {
+    $sql = "SELECT * FROM users WHERE usersUid = ?;";
+    $stmt = mysqli_stmt_init($conn);
+
+    if (!mysqli_stmt_prepare($stmt, $sql)) {
+        header("location: ../signup.php?error=stmtfailed");
+        exit();
+    }
+
+    mysqli_stmt_bind_param($stmt, "s", $username);
+    mysqli_stmt_execute($stmt);
+
+    $resultsData = mysqli_stmt_get_result($stmt);
+
+    if ($row = mysqli_fetch_assoc($resultsData)) {
+        return $row;
+    } else {
+        $result = false;
+        return $result;
+    }
+
+    mysqli_stmt_close($stmt);
 }
 
 function uidExists($conn, $username, $email) {
@@ -135,6 +167,40 @@ function getHomePageUserInfo($conn, $usersId){
         mysqli_stmt_close($stmt);
         return $result;
     }
+}
+
+function updateUserInfo($conn, $usersId, $name, $email, $username, $pwd, $pwdChanged = false){
+
+    
+    if ($pwdChanged) {
+        $sql = "UPDATE users SET usersName = ?, usersEmail = ?, usersUid = ?, usersPwd = ? WHERE usersId = ?;";
+        $hashedPwd = password_hash($pwd, PASSWORD_DEFAULT);
+        
+    } else  {
+        $sql = "UPDATE users SET usersName = ?, usersEmail = ?, usersUid = ? WHERE usersId = ?;";
+    }
+    
+    
+    $stmt = mysqli_stmt_init($conn);
+    
+
+    if (!mysqli_stmt_prepare($stmt, $sql)) {
+        //header("location: ../edituserinfo.php?error=stmtfailed"); 
+        echo "failed";
+        exit();
+    }
+
+    if ($pwdChanged) {
+        mysqli_stmt_bind_param($stmt, "ssssi", $name, $email, $username, $hashedPwd, $usersId);
+    } else {
+        mysqli_stmt_bind_param($stmt, "sssi", $name, $email, $username, $usersId);
+    }
+    
+    mysqli_stmt_execute($stmt);
+    mysqli_stmt_close($stmt);
+
+    header("location: ../home.php"); 
+    exit();
 }
 
 function clearUploads(){

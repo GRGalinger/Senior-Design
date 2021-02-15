@@ -26,7 +26,7 @@
 				<div class="box-row"> 
 
 					<div class="box-cell account-info"> 
-                        <form action="edituserinfo.inc.php">
+                        <form action="includes/edituserinfo.inc.php" method="post">
                             <h1> Account Info </h1>
                             <h3> Name: <?php echo $usersName ?></h3>
                             <hr>
@@ -37,9 +37,7 @@
                             <div class="btn-edit">
                                 <button type="submit" name="edit">edit</button>
                             </div>
-                            <div class="btn-reset-pwd">
-                                <button type="submit" name="pwd">reset password</button>
-                            </div>
+                            
                         </form>
 					</div> 
 
