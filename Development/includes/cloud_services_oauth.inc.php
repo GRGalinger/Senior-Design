@@ -17,19 +17,11 @@ if (isset($_POST["submit"])) {
         require_once 'dropbox_oauth.inc.php';
         $authUrl = $authHelper->getAuthUrl($callbackUrl);
         header('Location: ' . filter_var($authUrl, FILTER_SANITIZE_URL));
-        
-        
-        
-        
-        
-
-
-        
     
     } 
 
     if (isset($_POST["cbonedrive"])) {
-        
+        require_once 'onedrive_oauth.inc.php';
     
     } 
 

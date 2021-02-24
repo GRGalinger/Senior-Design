@@ -6,9 +6,9 @@ require_once 'dbh.inc.php';
 session_start(); 
 
 
-if (!file_exists("client_id.json")) exit("Client secret file not found");
+if (!file_exists("client_id_google_drive.json")) exit("Client secret file not found");
 $client = new Google_Client();
-$client->setAuthConfig('client_id.json');
+$client->setAuthConfig('client_id_google_drive.json');
 $client->addScope(Google_Service_Drive::DRIVE);
 
 $userId = $_SESSION['userid'];
