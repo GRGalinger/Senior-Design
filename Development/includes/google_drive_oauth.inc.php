@@ -1,10 +1,9 @@
-<?php
+<?php 
 
 require_once dirname(__DIR__, 1) .'/vendor/autoload.php';
 require_once 'functions.inc.php';
 require_once 'dbh.inc.php';
 session_start(); 
-
 
 if (!file_exists("client_id_google_drive.json")) exit("Client secret file not found");
 $client = new Google_Client();
@@ -23,6 +22,11 @@ if ($row != false){ // A row was returned, so this user has been authenticated b
     $accessToken = $client->getAccessToken();
     updateAccessToken($conn, $userId, $accessToken['access_token']);
   } 
+
+  if (dir_is_empty('../uploads/')) {
+    header("location: ../home.php");
+    exit;
+  }
 
   // Once access token is updated, or if it wasnt expired, proceed with upload
   $drive_service = new Google_Service_Drive($client);

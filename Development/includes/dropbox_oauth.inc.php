@@ -28,6 +28,11 @@ if ($row != false) {
  
         
     } 
+
+    if (dir_is_empty('../uploads/')) {
+        header("location: ../home.php");
+        exit;
+    }
     
     // Upload process..
     //Configure Dropbox Application

@@ -19,7 +19,7 @@ if (isset($_GET['code']) && isset($_GET['state'])) {
     $expires = 14400;
     $created = time();
 
-    insertDropboxCredentials($conn, $userId, $accessToken, $expires, $created);
+    insertDropboxCredentials($conn, $userId, $accessToken, $expires, $created, "Dropbox");
 }
 
 $redirect_uri = 'http://' . $_SERVER['HTTP_HOST'] . '/Projects/SeniorDesign/Development/includes/dropbox_oauth.inc.php';

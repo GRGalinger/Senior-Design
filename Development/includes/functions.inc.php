@@ -169,6 +169,30 @@ function getHomePageUserInfo($conn, $usersId){
     }
 }
 
+function getHomePageGoogleDriveInfo($conn, $usersId){
+    $sql = "SELECT * FROM google_credentials WHERE usersId = ?;";
+    $stmt = mysqli_stmt_init($conn);
+
+    if (!mysqli_stmt_prepare($stmt, $sql)) {
+        //header("location: ../signup.php?error=stmtfailed"); // TODO: This header needs changed
+    }
+
+    mysqli_stmt_bind_param($stmt, "i", $usersId);
+    mysqli_stmt_execute($stmt);
+
+    $resultsData = mysqli_stmt_get_result($stmt);
+
+    // If row is returned, then the logged in user aligns with the credentials file
+    if ($row = mysqli_fetch_assoc($resultsData)) {
+        mysqli_stmt_close($stmt);
+        return $row;
+    } else { 
+        $result = false;
+        mysqli_stmt_close($stmt);
+        return $result;
+    }
+}
+
 function updateUserInfo($conn, $usersId, $name, $email, $username, $pwd, $pwdChanged = false){
 
     
@@ -209,9 +233,22 @@ function clearUploads(){
     ); 
 }
 
-function insertCredentials($conn, $usersId, $accessToken, $expires, $scope, $tokenType, $created, $refreshToken) {
-    $sql = "INSERT INTO google_credentials (usersId, accessToken, expires, scope, tokenType, created, refreshToken) 
-        VALUES (?, ?, ?, ?, ?, ?, ?);";
+function dir_is_empty($dir) {
+    $handle = opendir($dir);
+    while (false !== ($entry = readdir($handle))) {
+      if ($entry != "." && $entry != "..") {
+        closedir($handle);
+        return FALSE;
+      }
+    }
+    closedir($handle);
+    return TRUE;
+  }
+
+  // this is google credentials, need to update function name
+function insertGoogleCredentials($conn, $usersId, $accessToken, $expires, $scope, $tokenType, $created, $refreshToken, $serviceType) {
+    $sql = "INSERT INTO google_credentials (usersId, accessToken, expires, scope, tokenType, created, refreshToken, serviceType) 
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?);";
     
     $stmt = mysqli_stmt_init($conn);
 
@@ -221,14 +258,14 @@ function insertCredentials($conn, $usersId, $accessToken, $expires, $scope, $tok
         exit();
     }
 
-    mysqli_stmt_bind_param($stmt, "isissis", $usersId, $accessToken, $expires, $scope, $tokenType, $created, $refreshToken);
+    mysqli_stmt_bind_param($stmt, "isississ", $usersId, $accessToken, $expires, $scope, $tokenType, $created, $refreshToken, $serviceType);
     mysqli_stmt_execute($stmt);
     mysqli_stmt_close($stmt);
     //header("location: ../signup.php?error=none");
 }
 
-function insertDropboxCredentials($conn, $usersId, $accessToken, $expires, $created) {
-    $sql = "INSERT INTO dropbox_credentials (usersId, accessToken, expires, created) 
+function insertDropboxCredentials($conn, $usersId, $accessToken, $expires, $created, $serviceType) {
+    $sql = "INSERT INTO dropbox_credentials (usersId, accessToken, expires, created, serviceType) 
         VALUES (?, ?, ?, ?);";
     
     $stmt = mysqli_stmt_init($conn);
@@ -239,9 +276,27 @@ function insertDropboxCredentials($conn, $usersId, $accessToken, $expires, $crea
         exit();
     }
 
-    mysqli_stmt_bind_param($stmt, "isii", $usersId, $accessToken, $expires, $created);
+    mysqli_stmt_bind_param($stmt, "isiis", $usersId, $accessToken, $expires, $created, $serviceType);
     mysqli_stmt_execute($stmt);
     mysqli_stmt_close($stmt);
+}
+
+function insertOneDriveCredentials($conn, $usersId, $accessToken, $expires, $scope, $tokenType, $created, $refreshToken, $serviceType) {
+    $sql = "INSERT INTO onedrive_credentials (usersId, accessToken, expires, scope, tokenType, created, refreshToken, serviceType) 
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?);";
+
+    $stmt = mysqli_stmt_init($conn);
+
+    if (!mysqli_stmt_prepare($stmt, $sql)) {
+        //header("location: ../signup.php?error=stmtfailed");
+        echo "failed";
+        exit();
+    }
+
+    mysqli_stmt_bind_param($stmt, "isississ", $usersId, $accessToken, $expires, $scope, $tokenType, $created, $refreshToken, $serviceType);
+    mysqli_stmt_execute($stmt);
+    mysqli_stmt_close($stmt);
+    //header("location: ../signup.php?error=none");
 }
 
 function getUserCredentials($conn, $usersId, $dbName){
@@ -251,7 +306,7 @@ function getUserCredentials($conn, $usersId, $dbName){
     } else if ($dbName == "dropbox_credentials"){
         $sql = "SELECT * FROM dropbox_credentials WHERE usersId = ?;";
     } else if ($dbName == "onedrive_credentials") {
-
+        $sql = "SELECT * FROM onedrive_credentials WHERE usersId = ?;";
     }
 
     $stmt = mysqli_stmt_init($conn);
