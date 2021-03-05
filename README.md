@@ -1,5 +1,5 @@
 # EZ-Drive
-Ez-Drive is a web application geared around allowing the user to easily record audio and video files. These files can then be uploaded to Google Drive and DropBox through the use of their respective API libraries. An option to encrypt the recorded files will also be available prior to backing them up through the chosen cloud service. Users will be authenticated through the OAuth2.0 Authentication framework in order to sign into their cloud service accounts. 
+Ez-Drive is a web application geared around allowing the user to easily upload files to their preferred cloud services. These files can be uploaded to Google Drive, DropBox, or OneDrive through the use of their respective API libraries. An option to encrypt the files may be available in the future. Users will be authenticated through the OAuth2.0 Authentication framework in order to sign into their cloud service accounts. 
 
 
 ## Team Members:
