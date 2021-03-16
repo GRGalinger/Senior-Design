@@ -86,7 +86,13 @@ body {
   display: inline-block;
   margin: 0;
 } 
-.container-home .box .box-cell.cloud-services .btn-disconnect {
+.container-home .box .box-cell.cloud-services .cloud-service .connection-status .connected h3 {
+  color: #95D5B2;
+}
+.container-home .box .box-cell.cloud-services .cloud-service .connection-status .not-connected h3 {
+  color: #FDC85E;
+}
+.container-home .box .box-cell.cloud-services .btn-disconnect[type="googledrive-disconnect"], .btn-disconnect[type="dropbox-disconnect"], .btn-disconnect[type="onedrive-disconnect"] {
   display: inline-block;
 } 
 .container-home .box .box-cell.cloud-services .btn-connect {
@@ -103,12 +109,25 @@ body {
   width:200px;
   text-align:justify;
 } 
+
+.container-home .box .box-cell.statuses input {
+  margin-bottom: 50px;
+  border-radius: 12px;
+  box-sizing: border-box;
+  font-family: "Courier";
+} 
+
 .container-home .box .box-cell.statuses button {
   margin-bottom: 50px;
   border-radius: 12px;
   box-sizing: border-box;
   font-family: "Courier";
 } 
+
+.container-home .box .box-cell.statuses input[type="submit"] {
+  padding: 12px 35px;
+} 
+
 .container-home .box .box-cell.statuses button[type="connect"] {
   padding: 12px 35px;
 } 
@@ -140,6 +159,8 @@ body {
 .container-home .box .box-cell.statuses .btn-dropbox .btn-disconnect {
   display: inline-block;
 } 
+
+
 
 /* Home - Upload button */
 .btn-upload button{

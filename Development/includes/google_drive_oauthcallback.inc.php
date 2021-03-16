@@ -1,8 +1,9 @@
-<?php
+<?php 
 require_once dirname(__DIR__, 1) .'/vendor/autoload.php';
 require_once 'functions.inc.php';
 require_once 'dbh.inc.php';
 session_start();
+
 
 $client = new Google_Client();
 $client->setAuthConfigFile('client_id_google_drive.json');
@@ -20,13 +21,14 @@ if (!isset($_GET['code'])) {
 
   // Now, we can add the credentials to the db
   $userId = $_SESSION['userid'];
-  insertCredentials($conn, $userId, 
+  insertGoogleCredentials($conn, $userId, 
         $credentials['access_token'], 
         $credentials['expires_in'], 
         $credentials['scope'], 
         $credentials['token_type'], 
         $credentials['created'], 
-        $credentials['refresh_token']
+        $credentials['refresh_token'],
+        "GoogleDrive"
   );
 
   $redirect_uri = 'http://' . $_SERVER['HTTP_HOST'] . '/Projects/SeniorDesign/Development/includes/google_drive_oauth.inc.php';

@@ -8,6 +8,29 @@
     $usersName = $userInfo['usersName'];
     $usersUid = $userInfo['usersUid'];
     $usersEmail = $userInfo['usersEmail'];
+    $googleDriveConnected = "";
+    $dropboxConnected = "";
+    $onedriveConnected = "";
+
+    // Get homepage cloud service info
+    $row = getHomePageCloudServiceInfo($conn, $userId);
+    if ($row != false) { 
+        if ($row['googledrive'] == 'GoogleDrive') {
+            $googleDriveConnected = "Connected";
+        } else { $googleDriveConnected = "Awaiting Connection..."; }
+
+        if ($row['dropbox'] == 'Dropbox') {
+            $dropboxConnected = "Connected";
+        } else { $dropboxConnected = "Awaiting Connection..."; }
+
+        if ($row['onedrive'] == 'OneDrive') {
+            $onedriveConnected = "Connected";
+        } else { $onedriveConnected = "Awaiting Connection..."; }
+    } 
+
+
+
+    
 ?>
 
     <div class="intro-index">
@@ -47,54 +70,84 @@
                             <form action="profile.inc.php">
                                 <h3> Google Drive </h3>
                             </form>
-                            <h3> grant.galinger@gmail.com </h3>
-                        </div>
-                        <div class="cloud-service">
-                            <form action="profile.inc.php">
-                                <h3> OneDrive </h3>
-                            </form>
-                            <h3> awaiting connection </h3>
+                            <div class="connection-status">
+                                <?php
+                                    if ($googleDriveConnected == "Connected") {
+                                        ?> <div class="connected"><h3> <?php echo $googleDriveConnected ?> </h3></div> <?php
+                                    } else {
+                                        ?> <div class="not-connected"><h3> <?php echo $googleDriveConnected ?> </h3></div><?php
+                                    } 
+                                ?>
+                            </div>
                         </div>
                         <div class="cloud-service">
                             <form action="profile.inc.php">
                                 <h3> Dropbox </h3>
                             </form>
-                            <h3> awaiting connection </h3>
+                            <div class="connection-status">
+                                <?php
+                                    if ($dropboxConnected == "Connected") {
+                                        ?> <div class="connected"><h3> <?php echo $dropboxConnected ?> </h3></div> <?php
+                                    } else {
+                                        ?> <div class="not-connected"><h3> <?php echo $dropboxConnected ?> </h3></div><?php
+                                    } 
+                                ?>
+                            </div>
                         </div>
+                        <div class="cloud-service">
+                            <form action="profile.inc.php">
+                                <h3> OneDrive </h3>
+                            </form>
+                            <div class="connection-status">
+                                <?php
+                                    if ($onedriveConnected == "Connected") {
+                                        ?> <div class="connected"><h3> <?php echo $onedriveConnected ?> </h3></div> <?php
+                                    } else {
+                                        ?> <div class="not-connected"><h3> <?php echo $onedriveConnected ?> </h3></div><?php
+                                    } 
+                                ?>
+                            </div>
+                        </div>
+                        
                     </div>
                      
                     <div class="box-cell statuses">
                         <h1> Status </h1>
                         <div class="btn-google-drive">
-                            <div class="btn-connect">
-                                <button type="connect">Connect</button>
-                            </div>
-                            <div class="btn-disconnect">
-                                <button type="disconnect">X</button>
-                            </div>
+                            <form action="includes/cloud_services_oauth.inc.php" method="post">
+                                <div class="btn-connect">
+                                    <input type="submit" name="googledriveconnect" value="Connect"></input>
+                                </div>
+                                <div class="btn-disconnect">
+                                    <button type="disconnect" name="googledrive-disconnect">X</button>
+                                </div>
+                            </form>
                         </div>
-                        <div class="btn-onedrive">
-                            <div class="btn-connect">
-                                <button type="connect">Connect</button>
-                            </div>
-                            <div class="btn-disconnect">
-                                <button type="disconnect">X</button>
-                            </div>
-                        </div>
+
                         <div class="btn-dropbox">
-                            <div class="btn-connect">
-                                <button type="connect">Connect</button>
-                            </div>
-                            <div class="btn-disconnect">
-                                <button type="disconnect">X</button>
-                            </div>
+                            <form action="includes/cloud_services_oauth.inc.php" method="post">
+                                <div class="btn-connect">
+                                    <input type="submit" name="dropboxconnect" value="Connect"></input>
+                                </div>
+                                <div class="btn-disconnect">
+                                <button type="disconnect" name="dropbox-disconnect">X</button>
+                                </div>
+                            </form>
+                        </div>
+
+                        <div class="btn-onedrive">
+                            <form action="includes/cloud_services_oauth.inc.php" method="post">
+                                <div class="btn-connect">
+                                    <input type="submit" name="onedriveconnect" value="Connect"></input>
+                                </div>
+                                <div class="btn-disconnect">
+                                <button type="disconnect" name="onedrive-disconnect">X</button>
+                                </div>
+                            </form>
                         </div>
                     </div>
-                    
 				</div> 
-                
 			</div> 
-
 		</div> 
 
         <div class="btn-upload">
