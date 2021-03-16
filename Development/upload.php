@@ -16,13 +16,13 @@
 					<span class="checkmark"></span>
 				</label>
 
-				<label class="checkbox" id="onedrive">Onedrive
-					<input type="checkbox"  name="cbonedrive">
+				<label class="checkbox" id="dropbox">Dropbox
+					<input type="checkbox"  name="cbdropbox">
 					<span class="checkmark"></span>
 				</label>
 
-				<label class="checkbox" id="dropbox">Dropbox
-					<input type="checkbox"  name="cbdropbox">
+				<label class="checkbox" id="onedrive">Onedrive
+					<input type="checkbox"  name="cbonedrive">
 					<span class="checkmark"></span>
 				</label>
 

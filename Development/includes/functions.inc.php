@@ -169,6 +169,36 @@ function getHomePageUserInfo($conn, $usersId){
     }
 }
 
+function getHomePageCloudServiceInfo($conn, $usersId){
+    $sql = "SELECT u.usersId, g.serviceType AS googledrive, d.serviceType AS dropbox, o.serviceType AS onedrive
+            FROM users u
+            LEFT JOIN google_credentials g ON g.usersId = u.usersId
+            LEFT JOIN dropbox_credentials d ON d.usersId = u.usersId
+            LEFT JOIN onedrive_credentials o ON o.usersId = u.usersId
+            WHERE u.usersId = ?;";
+
+    $stmt = mysqli_stmt_init($conn);
+
+    if (!mysqli_stmt_prepare($stmt, $sql)) {
+        //header("location: ../signup.php?error=stmtfailed"); // TODO: This header needs changed
+    }
+
+    mysqli_stmt_bind_param($stmt, "i", $usersId);
+    mysqli_stmt_execute($stmt);
+
+    $resultsData = mysqli_stmt_get_result($stmt);
+
+    // If row is returned, then the logged in user aligns with the credentials file
+    if ($row = mysqli_fetch_assoc($resultsData)) {
+        mysqli_stmt_close($stmt);
+        return $row;
+    } else { 
+        $result = false;
+        mysqli_stmt_close($stmt);
+        return $result;
+    }
+}
+
 function getHomePageGoogleDriveInfo($conn, $usersId){
     $sql = "SELECT * FROM google_credentials WHERE usersId = ?;";
     $stmt = mysqli_stmt_init($conn);
@@ -245,6 +275,25 @@ function dir_is_empty($dir) {
     return TRUE;
   }
 
+function deleteCloudServiceCredentials($conn, $usersId, $serviceType){
+    if ($serviceType == "GoogleDrive") {$sql = "DELETE FROM google_credentials WHERE usersId = ?;";}
+    elseif ($serviceType == "Dropbox") { $sql = "DELETE FROM dropbox_credentials WHERE usersId = ?;";}
+    else { $sql = "DELETE FROM onedrive_credentials WHERE usersId = ?;";}
+
+    $stmt = mysqli_stmt_init($conn);
+    if (!mysqli_stmt_prepare($stmt, $sql)) {
+        //header("location: ../signup.php?error=stmtfailed");
+        echo "failed";
+        exit();
+    }
+
+    mysqli_stmt_bind_param($stmt, "i", $usersId);
+    mysqli_stmt_execute($stmt);
+    mysqli_stmt_close($stmt);
+    header("location: ../home.php");
+    exit();
+}
+
   // this is google credentials, need to update function name
 function insertGoogleCredentials($conn, $usersId, $accessToken, $expires, $scope, $tokenType, $created, $refreshToken, $serviceType) {
     $sql = "INSERT INTO google_credentials (usersId, accessToken, expires, scope, tokenType, created, refreshToken, serviceType) 
@@ -266,8 +315,8 @@ function insertGoogleCredentials($conn, $usersId, $accessToken, $expires, $scope
 
 function insertDropboxCredentials($conn, $usersId, $accessToken, $expires, $created, $serviceType) {
     $sql = "INSERT INTO dropbox_credentials (usersId, accessToken, expires, created, serviceType) 
-        VALUES (?, ?, ?, ?);";
-    
+        VALUES (?, ?, ?, ?, ?);";
+   
     $stmt = mysqli_stmt_init($conn);
 
     if (!mysqli_stmt_prepare($stmt, $sql)) {

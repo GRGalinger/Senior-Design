@@ -4,7 +4,7 @@ require_once 'functions.inc.php';
 require_once 'dbh.inc.php';
 
 
-if (isset($_GET['code']) && isset($_GET['state'])) {
+if (isset($_GET['code']) && isset($_GET['state'])) { 
     
     //Bad practice! No input sanitization!
     $code = $_GET['code'];

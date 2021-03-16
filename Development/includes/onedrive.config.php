@@ -4,12 +4,12 @@ return [
     /**
      * Your OneDrive client ID.
      */
-    'ONEDRIVE_CLIENT_ID' => '4710db11-1a7d-4f47-aa87-d58f058ba3c5',
+    'ONEDRIVE_CLIENT_ID' => '035d6301-07d4-4cc3-83b7-a5fc9ea7d0e5',
 
     /**
      * Your OneDrive client secret.
      */
-    'ONEDRIVE_CLIENT_SECRET' => 'xBYMgi17I73L.K-0d~s7_zv8K5RnEBWrgL',
+    'ONEDRIVE_CLIENT_SECRET' => 'zV-wjEMP3.~s_S.1FBiWL8tPu6es_8Fxz1',
 
     /**
      * Your OneDrive redirect URI.

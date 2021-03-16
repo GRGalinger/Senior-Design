@@ -14,7 +14,8 @@ if (!file_exists("client_id_dropbox.json")) exit("Client secret file not found")
 $data = file_get_contents("client_id_dropbox.json");
 $data_json = json_decode($data, true);
 $dropboxKey = $data_json['client_id'];
-$dropboxSecret =$data_json['client_secret'];
+$dropboxSecret = $data_json['client_secret'];
+$redirectURI = $data_json['redirect_uri'];
 
 
 // Check if this user has an access token in the db and if its expired 
@@ -41,8 +42,6 @@ if ($row != false) {
     //Configure Dropbox service
     $dropbox = new Dropbox($app);
     
-    $authHelper = $dropbox->getAuthHelper();
-
     $dir = new DirectoryIterator('../uploads/');
     foreach ($dir as $fileinfo) {
         if (!$fileinfo->isDot()) {
@@ -66,7 +65,7 @@ if ($row != false) {
 
 } else {
     //Configure Dropbox Application
-    $app = new DropboxApp($dropboxKey,$dropboxSecret);
+    $app = new DropboxApp($dropboxKey,$dropboxSecret); 
     
     //Configure Dropbox service
     $dropbox = new Dropbox($app);

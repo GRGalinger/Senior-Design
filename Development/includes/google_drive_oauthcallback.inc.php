@@ -28,7 +28,7 @@ if (!isset($_GET['code'])) {
         $credentials['token_type'], 
         $credentials['created'], 
         $credentials['refresh_token'],
-        "Google_Drive"
+        "GoogleDrive"
   );
 
   $redirect_uri = 'http://' . $_SERVER['HTTP_HOST'] . '/Projects/SeniorDesign/Development/includes/google_drive_oauth.inc.php';

@@ -3,16 +3,18 @@
     require_once 'includes/functions.inc.php';
     require_once 'includes/dbh.inc.php';
 
-    
-
+    //This is next on the TODO: list
     // Display summary of files uploaded
     // Not sure what file attributes we will be able to display
     //  - at the very least the name
 
-    // Once files are displayed we can clear the uploads folder
+    // Display links with logo for each of the cloud services
 
-    // TODO: figure out why this isnt being called
-    clearUploads();
+
+
+
+    
+    // Once files are displayed we can clear the uploads folder
     array_map('unlink', array_filter( 
         (array) array_merge(glob("uploads/*")))
     ); 

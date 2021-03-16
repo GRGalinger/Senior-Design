@@ -86,10 +86,13 @@ body {
   display: inline-block;
   margin: 0;
 } 
-.container-home .box .box-cell.cloud-services .cloud-service .connection-status h3 {
+.container-home .box .box-cell.cloud-services .cloud-service .connection-status .connected h3 {
   color: #95D5B2;
 }
-.container-home .box .box-cell.cloud-services .btn-disconnect {
+.container-home .box .box-cell.cloud-services .cloud-service .connection-status .not-connected h3 {
+  color: #FDC85E;
+}
+.container-home .box .box-cell.cloud-services .btn-disconnect[type="googledrive-disconnect"], .btn-disconnect[type="dropbox-disconnect"], .btn-disconnect[type="onedrive-disconnect"] {
   display: inline-block;
 } 
 .container-home .box .box-cell.cloud-services .btn-connect {
