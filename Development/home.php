@@ -130,7 +130,7 @@
                                     <input type="submit" name="dropboxconnect" value="Connect"></input>
                                 </div>
                                 <div class="btn-disconnect">
-                                <button type="disconnect" name="dropbox-disconnect">X</button>
+                                    <button type="disconnect" name="dropbox-disconnect">X</button>
                                 </div>
                             </form>
                         </div>
@@ -141,7 +141,7 @@
                                     <input type="submit" name="onedriveconnect" value="Connect"></input>
                                 </div>
                                 <div class="btn-disconnect">
-                                <button type="disconnect" name="onedrive-disconnect">X</button>
+                                    <button type="disconnect" name="onedrive-disconnect">X</button>
                                 </div>
                             </form>
                         </div>

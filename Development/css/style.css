@@ -17,7 +17,7 @@ li h2 {
 
 }
 li a {
-  display: block;
+  display: block; 
   color: white;
   padding: 12px 16px;
   text-decoration: none;
@@ -32,6 +32,9 @@ li a:hover {
   border-radius: 12px;
   padding: 8px 20px;
   font-family: "Courier";
+}
+.btn-bottom button:hover {
+  background-color: #dddee2;
 }
 
 /* Body */
@@ -92,9 +95,9 @@ body {
 .container-home .box .box-cell.cloud-services .cloud-service .connection-status .not-connected h3 {
   color: #FDC85E;
 }
-.container-home .box .box-cell.cloud-services .btn-disconnect[type="googledrive-disconnect"], .btn-disconnect[type="dropbox-disconnect"], .btn-disconnect[type="onedrive-disconnect"] {
+/* .container-home .box .box-cell.cloud-services .btn-disconnect[type="googledrive-disconnect"], .btn-disconnect[type="dropbox-disconnect"], .btn-disconnect[type="onedrive-disconnect"] {
   display: inline-block;
-} 
+}  */
 .container-home .box .box-cell.cloud-services .btn-connect {
   display: inline-block;
   margin-left: 200px;
@@ -116,6 +119,9 @@ body {
   box-sizing: border-box;
   font-family: "Courier";
 } 
+.container-home .box .box-cell.statuses input:hover {
+  background-color:#dddee2;
+}
 
 .container-home .box .box-cell.statuses button {
   margin-bottom: 50px;
@@ -131,36 +137,22 @@ body {
 .container-home .box .box-cell.statuses button[type="connect"] {
   padding: 12px 35px;
 } 
-
 .container-home .box .box-cell.statuses button[type="disconnect"] {
   padding: 8px 15px;
   background: #EA8588;
 } 
-.container-home .box .box-cell.statuses .btn-google-drive .btn-connect {
+.container-home .box .box-cell.statuses button[type="disconnect"]:hover {
+  background-color: #e96e72;
+}
+.container-home .box .box-cell.statuses .btn-google-drive .btn-connect,
+.container-home .box .box-cell.statuses .btn-google-drive .btn-disconnect,
+.container-home .box .box-cell.statuses .btn-onedrive .btn-connect,
+.container-home .box .box-cell.statuses .btn-onedrive .btn-disconnect,
+.container-home .box .box-cell.statuses .btn-dropbox .btn-connect,
+.container-home .box .box-cell.statuses .btn-dropbox .btn-disconnect
+{
   display: inline-block;
 } 
-
-.container-home .box .box-cell.statuses .btn-google-drive .btn-disconnect {
-  display: inline-block;
-} 
-
-.container-home .box .box-cell.statuses .btn-onedrive .btn-connect {
-  display: inline-block;
-} 
-
-.container-home .box .box-cell.statuses .btn-onedrive .btn-disconnect {
-  display: inline-block;
-} 
-
-.container-home .box .box-cell.statuses .btn-dropbox .btn-connect {
-  display: inline-block;
-} 
-
-.container-home .box .box-cell.statuses .btn-dropbox .btn-disconnect {
-  display: inline-block;
-} 
-
-
 
 /* Home - Upload button */
 .btn-upload button{
@@ -170,6 +162,9 @@ body {
   border-radius: 12px;
   background: #95D5B2;
   font-family: "Courier";
+}
+.btn-upload button:hover {
+  background-color: #7bd3a2;;
 }
 
 /* Upload - Container  */
@@ -184,6 +179,9 @@ body {
 .container-upload input[type="submit"] {
   padding: 8px 35px;
   border-radius: 12px;
+}
+.container-upload input[type="submit"]:hover {
+  background-color: #dddee2;
 }
 
 /* Login - Container  */
