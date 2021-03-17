@@ -149,10 +149,12 @@ body {
 .container-home .box .box-cell.statuses .btn-onedrive .btn-connect,
 .container-home .box .box-cell.statuses .btn-onedrive .btn-disconnect,
 .container-home .box .box-cell.statuses .btn-dropbox .btn-connect,
-.container-home .box .box-cell.statuses .btn-dropbox .btn-disconnect
-{
+.container-home .box .box-cell.statuses .btn-dropbox .btn-disconnect {
   display: inline-block;
 } 
+.container-home h1 {
+  text-decoration: underline;
+}
 
 /* Home - Upload button */
 .btn-upload button{
@@ -170,18 +172,20 @@ body {
 /* Upload - Container  */
 .container-upload {
   margin-left: 28%;
-  margin-top:7.6%;
+  margin-top:5.0%;
   padding: 10px; 
   background-color: white;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
-
 .container-upload input[type="submit"] {
   padding: 8px 35px;
   border-radius: 12px;
 }
 .container-upload input[type="submit"]:hover {
   background-color: #dddee2;
+}
+.container-upload h1 {
+  text-decoration: underline;
 }
 
 /* Login - Container  */
@@ -238,20 +242,23 @@ body {
 /* About- Container  */
 .container-about {
   margin-left: 28%;
-  margin-top:7.6%;
+  margin-top:5.0%;
   width: 920px;
-  height: 1540px;
+  height: 1240px;
   padding: 10px; 
   margin-bottom: 80px;
   background: white;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.container-about h1 {
+  text-decoration: underline;
 }
 
 
 /* Edit User Info - Container  */
 .container-edituserinfo {
   margin-left: 28%;
-  margin-top:7.6%;
+  margin-top:5.0%;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   padding: 10px; 
   background:white; 
@@ -260,20 +267,69 @@ body {
   width:350px;
   height: 500px;
 }
-
 .container-edituserinfo .info {
   margin-bottom: 5px;
 }
-
 .container-edituserinfo .info input {
   padding: 12px 20px;
   width: 200px;
   
 }
-
 .container-edituserinfo .btns-edit button {
   padding: 12px 20px;
 }
+.container-edituserinfo h1 {
+  text-decoration: underline;
+}
+
+/* Results - Container  */
+.container-results {
+  margin-left: 28%;
+  margin-top:5.0%;
+  padding: 10px; 
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.container-results .box .box-cell.upload-summary .file-summary h3 {
+  color:#e96e72;
+}
+.container-results .box .box-cell.cloud-service-links {
+  padding: 10px; 
+  padding-left: 20px;
+  background: rgb(218, 137, 137); 
+  color:black; 
+  width:500px;
+  text-align:justify
+} 
+.link-images{
+  display: inline-block;
+  margin-top: 20px;
+  margin-left:380px;
+}
+.link-images a {
+  margin: 10px;
+}
+.link-images h3 {
+  margin-left: 35px;
+  text-decoration: underline;
+}
+.link-images img {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.container-results .box { 
+  display:table; 
+} 
+.container-results .box .box-row { 
+  display:table-row; 
+} 
+.container-results .box .box-cell { 
+  display:table-cell; 
+} 
+.container-results h1{
+  text-decoration: underline;
+}
+
 
 
 
