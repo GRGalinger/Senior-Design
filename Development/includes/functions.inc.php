@@ -263,6 +263,14 @@ function clearUploads(){
     ); 
 }
 
+function filesizeFormatted($path)
+{
+    $size = filesize($path);
+    $units = array( 'B', 'KB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB');
+    $power = $size > 0 ? floor(log($size, 1024)) : 0;
+    return number_format($size / pow(1024, $power), 2, '.', ',') . ' ' . $units[$power];
+}
+
 function dir_is_empty($dir) {
     $handle = opendir($dir);
     while (false !== ($entry = readdir($handle))) {

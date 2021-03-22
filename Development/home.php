@@ -26,22 +26,8 @@
         if ($row['onedrive'] == 'OneDrive') {
             $onedriveConnected = "Connected";
         } else { $onedriveConnected = "Awaiting Connection..."; }
-    } 
-
-
-
-    
+    }  
 ?>
-
-    <div class="intro-index">
-        <?php
-            if (isset($_SESSION["useruid"])) {
-                echo "<p>Hello, " . $_SESSION["useruid"] . "</p>";
-            }
-        ?>
-        <!-- <h1>Welcome to EZ-Drive</h1> -->
-        <!-- <p> EZ-Drive is a platform for uploading your files to your favorite cloud services all in one</p> -->
-    </div>
 
     <div class="container-home"> 
 			<div class="box"> 
@@ -130,7 +116,7 @@
                                     <input type="submit" name="dropboxconnect" value="Connect"></input>
                                 </div>
                                 <div class="btn-disconnect">
-                                <button type="disconnect" name="dropbox-disconnect">X</button>
+                                    <button type="disconnect" name="dropbox-disconnect">X</button>
                                 </div>
                             </form>
                         </div>
@@ -141,7 +127,7 @@
                                     <input type="submit" name="onedriveconnect" value="Connect"></input>
                                 </div>
                                 <div class="btn-disconnect">
-                                <button type="disconnect" name="onedrive-disconnect">X</button>
+                                    <button type="disconnect" name="onedrive-disconnect">X</button>
                                 </div>
                             </form>
                         </div>

@@ -34,10 +34,6 @@ if (isset($_POST['onedrive-disconnect'])){
     deleteCloudServiceCredentials($conn, $userId, $serviceType);
 }
 
-
-
-
-
 // The last three statements are for the checkboxes on the uploads page
 if (isset($_POST["submit"])) {
     if (isset($_POST["cbgoogledrive"])) {
