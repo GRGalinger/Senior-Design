@@ -4,7 +4,6 @@ require_once 'functions.inc.php';
 require_once 'dbh.inc.php';
 session_start();
 
-
 $client = new Google_Client();
 $client->setAuthConfigFile('client_id_google_drive.json');
 $client->setRedirectUri('http://' . $_SERVER['HTTP_HOST'] . '/Projects/SeniorDesign/Development/includes/google_drive_oauthcallback.inc.php');
@@ -13,11 +12,14 @@ $client->setAccessType('offline');  // this allowed for refresh tokens to be use
 
 if (!isset($_GET['code'])) {
   $auth_url = $client->createAuthUrl();
+  // echo $auth_url;
+  // exit();
   header('Location: ' . filter_var($auth_url, FILTER_SANITIZE_URL));
 
 } else {
   $client->authenticate($_GET['code']);
   $credentials = $client->getAccessToken();  // This function returns an array of credential information
+  
 
   // Now, we can add the credentials to the db
   $userId = $_SESSION['userid'];

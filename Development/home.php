@@ -98,7 +98,7 @@
                     </div>
                      
                     <div class="box-cell statuses">
-                        <h1> Status </h1>
+                        <h1> Connect </h1>
                         <div class="btn-google-drive">
                             <form action="includes/cloud_services_oauth.inc.php" method="post">
                                 <div class="btn-connect">
