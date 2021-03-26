@@ -10,9 +10,12 @@ Ez-Drive is a web application geared around allowing the user to easily upload f
 
 ## Final Presentation Resources:
 ### All resources are links to Google Drive, where the poster and videos can be easily viewed --
-1. [Slide Deck](<a href="https://drive.google.com/file/d/1EPzXG-bX_Glb6A4QedMnyVFaO3c0ldRQ/view?usp=sharing" target="_blank"></a>)
+1. [Slide Deck](https://drive.google.com/file/d/1EPzXG-bX_Glb6A4QedMnyVFaO3c0ldRQ/view?usp=sharing)
 2. [Poster](https://drive.google.com/file/d/1Sovo2MOr0DwRYboEDS3m8CXgSjwYSJ2m/view?usp=sharing)
 3. [Presentation (.mp4)](https://drive.google.com/file/d/1AgI2q-jvHuDQgUHCOKpJL3DKApDe9h2J/view?usp=sharing)
+
+
+<a href="https://drive.google.com/file/d/1EPzXG-bX_Glb6A4QedMnyVFaO3c0ldRQ/view?usp=sharing" target="_blank">Slide Deck</a>
 
 
 ## Table of Contents
