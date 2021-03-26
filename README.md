@@ -9,8 +9,8 @@ Ez-Drive is a web application geared around allowing the user to easily upload f
 * Professor Annexstein - Project Advisor
 
 ## Final Presentation Resources:
-1. [Slide Deck](Files/SlideDeck/PresentationSlideDeck.pptx)
-2. [Poster](Files/poster/Poster_FinalDraft.jpg)
+1. [Slide Deck](https://drive.google.com/file/d/1EPzXG-bX_Glb6A4QedMnyVFaO3c0ldRQ/view?usp=sharing)
+2. [Poster](https://drive.google.com/file/d/1Sovo2MOr0DwRYboEDS3m8CXgSjwYSJ2m/view?usp=sharing)
 3. [Presentation (.mp4)](https://drive.google.com/file/d/1AgI2q-jvHuDQgUHCOKpJL3DKApDe9h2J/view?usp=sharing)
 
 
