@@ -11,7 +11,7 @@ Ez-Drive is a web application geared around allowing the user to easily upload f
 ## Final Presentation Resources:
 1. [Slide Deck](Files/SlideDeck/PresentationSlideDeck.pptx)
 2. [Poster](Files/poster/Poster_FinalDraft.jpg)
-3. [Presentation (.mp4)](https://drive.google.com/file/d/16u54AtcKTQZRy8GrJcg9VzRKvKnX1zu1/view?usp=sharing)
+3. [Presentation (.mp4)](https://drive.google.com/file/d/1AgI2q-jvHuDQgUHCOKpJL3DKApDe9h2J/view?usp=sharing)
 
 
 ## Table of Contents
