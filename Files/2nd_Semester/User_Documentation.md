@@ -23,13 +23,13 @@
 
 #### In order to upload your files simply drag and drop them into the upload box, or click the box to search through your computer. Once all your files are selected, simply click the "upload" button next to the checkboxes. This will execute the upload process and upon completion take you to the Results page. 
 
-![Uploads](../Resources/Images/upload.png)
+![Uploads](../Resources/Images/Upload.png)
 
 
 ### 4) View Upload Results
 #### Once your uploads have completed, you will be taken to the Results page where a list of the files you uploaded are displayed, as well as links to each of the cloud services if you wish to proceed to them. From here, you can return to the Home page or go back to the Upload page if you wish to upload additional files. 
 
-#### Results page is in progress, no image atm
+#### Results page is in progress, no image atm.
 
 
 ## Section 2.0 - Cloning Repository for Local Usage
