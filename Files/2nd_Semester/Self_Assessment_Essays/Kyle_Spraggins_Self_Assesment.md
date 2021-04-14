@@ -1,0 +1,13 @@
+## Assignment #6 – Self Assessment 
+## Name: Kyle Spraggins
+## Members: Josh Phillips, Grant Galinger 
+
+## Part A
+### On this project, I contributed the original project idea, which we ended up taking in a new direction. I helped to work on assignments, contributed small amounts to the code, and gave feedback. In my initial assessment, I identified privacy and security as the main things I wanted to work on. The project took a much different path then what we first thought, and we had to scale down and remove some parts. As a result, privacy and security was not at the forefront as we thought it might be with the encrypted messenger portion. However, I also stated that web application and JavaScript experience would be important, and both of those things served as the backbone for our project.
+
+### As I stated earlier, I mainly worked on assignments, feedback, and some code. For assignments, we each did some of the work and tried to split it evenly as best we could. I gave feedback on progress and thoughts on next steps in our group chat. I didn’t work on the code too much, I added information to pages where necessary, especially to the About page, and merged my changes with the repo. I learned a lot about web applications and how difficult it can be to build one. I built competencies in JavaScript and worked with php for the first time. I was successful in staying up to date on project and assignment progress and contributing as well as I could. One obstacle was working with php, it took a lot of time for me to be comfortable with using it as I had never used it before.
+
+## Part B
+### Our group accomplished quite a bit over the course of the two semesters. We finished our project, EZ-Drive and completed every assignment on time. Our project is a web application for users to easily upload files via drag and drop to cloud services like Google Drive, DropBox, and OneDrive, all in one place. It uses MySQL and php for our database solution, and JavaScript, HTML, and CSS for all front- end work and design.
+
+### Teamwork was successful in that we were able to communicate with each other easily through Slack, contribute to assignments together, and give each other feedback. However, it was sometimes difficult to communicate effectively due to not meeting in-person. It was also difficult to evenly distribute work between us. As far as my individual efforts, I believe I contributed roughly the same amount as Josh, but much less than Grant. Grant definitely deserves special recognition in my opinion. He did most of the code and kept us on track with completing assignments. All in all if there was one thing I could change this past semester, it would be to contribute more to this project.
