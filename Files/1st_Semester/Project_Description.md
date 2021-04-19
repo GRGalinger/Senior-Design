@@ -1,7 +1,7 @@
 # Project Description
-Ez-Drive is a web application geared around allowing the user to easily record audio and video files. These files can then be uploaded to Google Drive and DropBox through the use of their respective API libraries. An option to encrypt the recorded files will also be available prior to backing them up through the chosen cloud service. Users will be authenticated through the OAuth2.0 Authentication framework in order to sign into their cloud service accounts. 
+Ez-Drive is a web application geared around allowing the user to easily upload files to their preferred cloud services. These files can be uploaded to Google Drive, DropBox, or OneDrive through the use of their respective API libraries. Users will be authenticated through the OAuth2.0 Authentication framework in order to sign into their cloud service accounts. 
 
-The application will utilize various media capture APIs in order to record in browser, such as getUserMedia. 
+Transitioning from the 1st Semester to the 2nd, our project abstract was modified to fit a new vision for our project. The major change was transitioning from an audio/video recording platform with a minor focus on uploading files to only one cloud service through its API library, to dropping the audio/video component and focusing on uploading files to three different cloud services. This is why you will see some differences in the description of our project goals in 1st semester assignments. 
                                         
 ## Team Name 
 * EZ-Drive
@@ -15,8 +15,8 @@ The application will utilize various media capture APIs in order to record in br
 * Prof. Fred Annexstein
 
 ## Project Topic Area
-* Web application for creating video/audio recordings
+* Web application for backing up user files
 * Implement Google Drive API 
 * Implement Dropbox API
-* Implement media capture API
-* Implement a form of file encryption for recorded files
+* Implement OneDrive API
+* Implement drag and drop file uploading

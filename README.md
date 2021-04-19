@@ -20,45 +20,23 @@ Transitioning from the 1st Semester to the 2nd, our project abstract was modifie
 ## Table of Contents
 
 ### **2nd Semester** Documents/Resources:
-1. [User Documentation](Files/2nd_Semester/User_Documentation.md)
-
-2. [Test Plans](Files/2nd_Semester/Test_Plan.md)
-
-3. [PPT SlideShow](Files/2nd_Semester/Final_Presentation/PresentationFinal2S.pptx)
-
-4. [Poster Images](Files/2nd_Semester/Poster/)
-
-5. Self Assesment Essays
-    * [Grant Galinger](Files/2nd_Semester/Self_Assessment_Essays/Grant_Galinger_Assessment.md)
-    * [Josh Phillips](Files/2nd_Semester/Self_Assessment_Essays/Josh_Phillips_Assessment.md)
-    * [Kyle Spraggins](Files/2nd_Semester/Self_Assessment_Essays/Kyle_Spraggins_Assessment.md)
-
-
-### **1st Semester** Documents/Resources:
 1. [Project Description](Files/1st_Semester/Project_Description.md)
 
-2. User Stories & Design Diamgrams
-    * [User Stories](Files/1st_Semester/User_Stories.md)
-    * [Design Diagrams](Files/1st_Semester//Design_Diagrams.md)
+2. [UI Specification](https://drive.google.com/drive/folders/10xmFBxXPtOROnOqenXgZKCkG5xcQF3pJ?usp=sharing)
 
-3. Project Tasks & Timeline
-    * [Project Tasks](Files/1st_Semester/Task_List.md)
-    * [Timeline/Effort Matrix](Files/1st_Semester/Milestones.md)
+3. [Test Plans](Files/2nd_Semester/Test_Plan.md)
 
-4. [ABET Concerns](Files/1st_Semester/Constraints.md)
+4. [User Documentation](Files/2nd_Semester/User_Documentation.md)
 
-5. [PPT SlideShow](Files/1st_Semester/Final_Presentation/PresentationFinal1S.pptx)
+5. [PPT SlideShow](https://drive.google.com/file/d/1AgI2q-jvHuDQgUHCOKpJL3DKApDe9h2J/view?usp=sharing)
 
-6. Self Assesment Essays
-    * [Grant Galinger](Files/1st_Semester/Self_Assessment_Essays/Grant_Galinger_Assessment.md)
-    * [Josh Phillips](Files/1st_Semester/Self_Assessment_Essays/Josh_Phillips_Assessment.md)
-    * [Kyle Spraggins](Files/1st_Semester/Self_Assessment_Essays/Kyle_Spraggins_Assessment.md)
+6. [Poster Images](https://drive.google.com/file/d/1Sovo2MOr0DwRYboEDS3m8CXgSjwYSJ2m/view?usp=sharing)
 
-7. Professional Biographies
-    * [Grant Galinger](Files/1st_Semester/Professional_Biographies/Grant_Galinger_Professional_Bio.md)
-    * [Josh Phillips](Files/1st_Semester/Professional_Biographies/Josh_Phillips_Professional_Bio.md)
-    * [Kyle Spraggins](Files/1st_Semester/Professional_Biographies/Kyle_Spraggins_Professional_Bio.md)
+7. Self Assesment Essays
+    * [1st Semester](Files/1st_Semester/Self_Assessment_Essays/)
+    * [2nd Semester](Files/2nd_Semester/Self_Assessment_Essays/)
 
-8. [Budget](Files/1st_Semester/Budget.md)
-
-9. [Appendix](Files/1st_Semester/Appendix.md) 
+8. Summary of Hours and Justification
+    * [Grant Galinger]()
+    * [Kyle Spraggins]()
+    * [Josh Phillips]()
