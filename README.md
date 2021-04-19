@@ -37,6 +37,6 @@ Transitioning from the 1st Semester to the 2nd, our project abstract was modifie
     * [2nd Semester](Files/2nd_Semester/Self_Assessment_Essays/)
 
 8. Summary of Hours and Justification
-    * [Grant Galinger]()
-    * [Kyle Spraggins]()
-    * [Josh Phillips]()
+    * [Grant Galinger](Files/2nd_Semester/Justification/Grant_Galinger.md)
+    * [Kyle Spraggins](Files/2nd_Semester/Justification/Kyle_Spraggins.md)
+    * [Josh Phillips](Files/2nd_Semester/Justification/Josh_Phillips.md)
