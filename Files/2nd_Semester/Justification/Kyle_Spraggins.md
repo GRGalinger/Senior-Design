@@ -1,7 +1,9 @@
 ## Summary of Hours and Justification
 
-## Total Hours from both Semesters: ?? hours
-"quick summary paragraph" 
+## Total Hours from both Semesters: 88 hours
+Most assignments took only a couple of hours of my time, 
+some of the larger assignments took more time. Development
+focus was mainly on testing and adding to existing functionality.
 
 ## 1st Semester
 Here is a breakdown of the time spent for each assignment:
@@ -41,6 +43,15 @@ Here is a breakdown of the time spent for each assignment:
 
 Here is a breakdown of the time I spent on development:
 
-* 
+* Setting up development/testing environment - 4 hrs
+* Building About page - 4 hrs
+* Updating repo and project descriptions - 2 hrs
+* Testing account creation and user interface - 4 hrs
+* Testing cloud account linking - 2 hrs
+* Testing backup functionality - 4 hrs
+* Testing database persistence and storage - 4 hrs
+* Testing Dropzone functionality with different file types - 3 hrs
+* Testing UX and ease-of-use - 2hrs
+* UI updates - 2 hrs
 
-## Total 2nd Semester: ?? hours
+## Total 2nd Semester: 45 hours

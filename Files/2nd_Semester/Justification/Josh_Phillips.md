@@ -1,7 +1,10 @@
 ## Summary of Hours and Justification
 
-## Total Hours from both Semesters: ?? hours
-"quick summary paragraph" 
+## Total Hours from both Semesters: 80 hours
+I was mainly focused on documentation for easy drive and testing the application
+in my virtual environment. In the first semester I was also focused on researching ways
+to implement the EZ-Drive design templates and creating prototypes. During the second semester
+I helped update the repository periodically and researched some of the tools used in EZ-Drive.
 
 ## 1st Semester
 Here is a breakdown of the time spent for each assignment:
@@ -40,6 +43,12 @@ Here is a breakdown of the time spent for each assignment:
 
 Here is a breakdown of the time I spent on development:
 
-* 
+* Setting up devlopment/testing environment - 5hrs
+* Researching backend Apache server - 3hrs
+* Researching phpMyAdmin - 3hrs
+* Researching Google Drive, OneDrive and Dropbox API libraries - 6hrs
+* Testing EZ-Drive interface in my testing environment -3hrs
+* Updating Test Plan in repo - 1hr
+* Updating User Documentation in repo - 1hr
 
-## Total 2nd Semester: ?? hours
+## Total 2nd Semester: 36 hours

@@ -19,7 +19,6 @@ Transitioning from the 1st Semester to the 2nd, our project abstract was modifie
 
 ## Table of Contents
 
-### **2nd Semester** Documents/Resources:
 1. [Project Description](Files/1st_Semester/Project_Description.md)
 
 2. [UI Specification](https://drive.google.com/drive/folders/10xmFBxXPtOROnOqenXgZKCkG5xcQF3pJ?usp=sharing)
@@ -30,7 +29,7 @@ Transitioning from the 1st Semester to the 2nd, our project abstract was modifie
 
 5. [PPT SlideShow](https://drive.google.com/file/d/1AgI2q-jvHuDQgUHCOKpJL3DKApDe9h2J/view?usp=sharing)
 
-6. [Poster Images](https://drive.google.com/file/d/1Sovo2MOr0DwRYboEDS3m8CXgSjwYSJ2m/view?usp=sharing)
+6. [Poster Images](Files/2nd_Semester/Poster/)
 
 7. Self Assesment Essays
     * [1st Semester](Files/1st_Semester/Self_Assessment_Essays/)
