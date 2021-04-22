@@ -16,6 +16,9 @@ Transitioning from the 1st Semester to the 2nd, our project abstract was modifie
 2. [Poster](https://drive.google.com/file/d/1Sovo2MOr0DwRYboEDS3m8CXgSjwYSJ2m/view?usp=sharing)
 3. [Presentation (.mp4)](https://drive.google.com/file/d/1AgI2q-jvHuDQgUHCOKpJL3DKApDe9h2J/view?usp=sharing)
 
+## All Assignments
+1. [1st Semester](Files/1st_Semester/)
+2. [2nd_Semester](Files/2nd_Semester/)
 
 ## Table of Contents
 
